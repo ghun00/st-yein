@@ -17,9 +17,9 @@ export default function FloatingTabs() {
   const pathname = usePathname()
 
   return (
-    <nav className="fixed top-[60px] left-1/2 transform -translate-x-1/2 z-50 animate-fade-in">
+    <nav className="fixed top-[40px] sm:top-[50px] md:top-[60px] left-1/2 transform -translate-x-1/2 z-50 animate-fade-in">
       <div 
-        className="flex gap-2 rounded-full px-3 py-2.5 shadow-premium border border-white/10 backdrop-blur-xl"
+        className="flex gap-1 sm:gap-2 rounded-full px-2 sm:px-3 py-1.5 sm:py-2 md:py-2.5 shadow-premium border border-white/10 backdrop-blur-xl"
         style={{ backgroundColor: '#B4410480' }}
       >
         {TABS.map((tab) => {
@@ -29,7 +29,7 @@ export default function FloatingTabs() {
               key={tab.path}
               href={tab.path}
               className={`
-                whitespace-nowrap px-6 py-2.5 rounded-full text-[14px] font-medium transition-all duration-300
+                whitespace-nowrap px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-2.5 rounded-full text-[12px] sm:text-[14px] md:text-[16px] font-medium transition-all duration-300
                 ${
                   isActive
                     ? 'bg-ink/95 text-paper font-bold shadow-lg scale-105'

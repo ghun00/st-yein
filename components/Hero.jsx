@@ -6,7 +6,7 @@ import Image from 'next/image'
  */
 export default function Hero() {
   return (
-    <section className="bg-brand-orange min-h-screen flex items-center py-16 md:py-24 relative overflow-hidden">
+    <section className="bg-brand-orange min-h-screen flex items-center pt-[120px] sm:pt-[140px] md:pt-16 pb-16 md:py-24 relative overflow-hidden">
       {/* 그라데이션 오버레이 */}
       <div className="absolute inset-0 bg-gradient-to-br from-brand-orange via-brand-orange to-[#D9541A] opacity-100" />
       
