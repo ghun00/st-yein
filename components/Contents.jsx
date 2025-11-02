@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import ScrollAnimate from './ScrollAnimate'
 
 /**
  * 내용 목록 섹션 컴포넌트
@@ -32,16 +33,24 @@ export default function Contents() {
         {/* 모바일: 세로 배치 */}
         <div className="block md:hidden">
           {/* 제목 섹션 */}
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-white text-[24px] md:text-[40px] font-bold leading-tight">
-              전략 자료집에는 이런 내용이 포함되어 있어요
-            </h2>
-          </div>
+          <ScrollAnimate animationType="fadeInUp" delay={0}>
+            <div className="text-center mb-16">
+              <h2 className="text-white text-[24px] md:text-[40px] font-bold leading-[1.6]">
+                전략 자료집에는
+                <br className="inline md:hidden" />
+                이런 내용이 포함되어 있어요
+              </h2>
+            </div>
+          </ScrollAnimate>
 
           {/* PART 구조 */}
           <div className="space-y-12">
             {parts.map((part, partIndex) => (
-              <div key={partIndex} className="animate-fade-in-up" style={{ animationDelay: `${partIndex * 0.1}s` }}>
+              <ScrollAnimate
+                key={partIndex}
+                animationType="fadeInUp"
+                delay={partIndex * 100}
+              >
                 {/* PART 제목 */}
                 <div>
                   <span className="text-brand-orange text-[20px] font-bold mr-3">
@@ -51,7 +60,7 @@ export default function Contents() {
                     {part.title}
                   </span>
                 </div>
-              </div>
+              </ScrollAnimate>
             ))}
           </div>
         </div>
@@ -59,16 +68,22 @@ export default function Contents() {
         {/* 태블릿 및 PC: 좌우 분할 레이아웃 */}
         <div className="hidden md:grid md:grid-cols-2 md:gap-12 lg:gap-16">
           {/* 왼쪽: 타이틀 */}
-          <div className="flex items-start animate-fade-in-up">
-            <h2 className="text-white text-[24px] md:text-[32px] lg:text-[48px] font-bold leading-tight">
-              전략 자료집에는<br />이런 내용이<br />포함되어 있어요
-            </h2>
-          </div>
+          <ScrollAnimate animationType="fadeInLeft" delay={0}>
+            <div className="flex items-start">
+              <h2 className="text-white text-[24px] md:text-[32px] lg:text-[48px] font-bold leading-tight">
+                전략 자료집에는<br />이런 내용이<br />포함되어 있어요
+              </h2>
+            </div>
+          </ScrollAnimate>
 
           {/* 오른쪽: PART 구조 */}
           <div className="space-y-12 md:space-y-16 lg:space-y-20">
             {parts.map((part, partIndex) => (
-              <div key={partIndex} className="animate-fade-in-up" style={{ animationDelay: `${partIndex * 0.1}s` }}>
+              <ScrollAnimate
+                key={partIndex}
+                animationType="fadeInRight"
+                delay={partIndex * 100}
+              >
                 {/* PART 제목 */}
                 <div>
                   <span className="text-brand-orange text-[20px] md:text-[24px] lg:text-[28px] font-bold mr-3">
@@ -78,7 +93,7 @@ export default function Contents() {
                     {part.title}
                   </span>
                 </div>
-              </div>
+              </ScrollAnimate>
             ))}
           </div>
         </div>
