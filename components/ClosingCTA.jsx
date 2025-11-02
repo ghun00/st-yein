@@ -12,7 +12,7 @@ export default function ClosingCTA() {
       
       <div className="w-full max-w-content mx-auto px-4 md:px-6 lg:px-8 text-center space-y-10 md:space-y-12 relative z-10 font-semibold">
         <ScrollAnimate animationType="fadeInUp" delay={0}>
-          <div className="space-y-5 md:space-y-7 text-white/95 text-[24px] md:text-[32px] leading-relaxed font-semibold">
+          <div className="space-y-5 md:space-y-7 text-white/95 text-[24px] md:text-[32px] leading-relaxed font-semibold mb-16 md:mb-24 lg:mb-28">
             <p>
               <span className="inline md:hidden">
                 겨울방학은 1년 중 <br />가장 큰 격차가 벌어지는 시기입니다.
