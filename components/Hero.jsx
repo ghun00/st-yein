@@ -32,7 +32,7 @@ export default function Hero() {
           </div>
 
           {/* CTA 버튼 */}
-          <div className="flex justify-center pt-8">
+          <div className="flex justify-center pt-4">
             <a
               href="https://tally.so/r/3jdE9R"
               target="_blank"
