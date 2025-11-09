@@ -1,12 +1,38 @@
+'use client'
+
 import Image from 'next/image'
+import { useRef } from 'react'
+import { sendGAEvent } from '../lib/ga'
+import { useSectionViewTracking } from '../lib/useSectionViewTracking'
 
 /**
  * 히어로 섹션 컴포넌트
  * 주황색 배경에 메인 메시지와 책 이미지를 표시합니다.
  */
 export default function Hero() {
+  const sectionRef = useRef(null)
+
+  useSectionViewTracking({
+    targetRef: sectionRef,
+    eventName: 'view_hero',
+    eventParams: {
+      section_id: 'hero',
+    },
+  })
+
+  const handlePrimaryCtaClick = () => {
+    sendGAEvent('cta_click', {
+      cta_id: 'hero_primary',
+      cta_label: '예체능 입시생 전략집 무료로 받기',
+      section_id: 'hero',
+    })
+  }
+
   return (
-    <section className="bg-brand-orange min-h-screen flex items-center pt-[120px] sm:pt-[140px] md:pt-16 pb-16 md:py-24 relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="bg-brand-orange min-h-screen flex items-center pt-[120px] sm:pt-[140px] md:pt-16 pb-16 md:py-24 relative overflow-hidden"
+    >
       {/* 그라데이션 오버레이 */}
       <div className="absolute inset-0 bg-gradient-to-br from-brand-orange via-brand-orange to-[#D9541A] opacity-100" />
       
@@ -39,6 +65,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               role="button"
               className="group inline-block bg-ink text-paper px-8 md:px-10 py-4 md:py-5 rounded-full font-semibold text-[16px] md:text-[18px] shadow-premium hover:shadow-premium-orange hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-ink/20 focus:ring-offset-2 focus:ring-offset-brand-orange"
+              onClick={handlePrimaryCtaClick}
             >
               <span className="relative z-10">예체능 입시생 전략집 무료로 받기</span>
             </a>

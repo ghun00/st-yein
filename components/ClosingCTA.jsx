@@ -1,12 +1,38 @@
+'use client'
+
 import ScrollAnimate from './ScrollAnimate'
+import { useRef } from 'react'
+import { sendGAEvent } from '../lib/ga'
+import { useSectionViewTracking } from '../lib/useSectionViewTracking'
 
 /**
  * 클로징 CTA 섹션 컴포넌트
  * 검은색 배경에 최종 메시지와 CTA 버튼을 표시합니다.
  */
 export default function ClosingCTA() {
+  const sectionRef = useRef(null)
+
+  useSectionViewTracking({
+    targetRef: sectionRef,
+    eventName: 'view_closing_cta',
+    eventParams: {
+      section_id: 'closing_cta',
+    },
+  })
+
+  const handlePrimaryCtaClick = () => {
+    sendGAEvent('cta_click', {
+      cta_id: 'closing_primary',
+      cta_label: '예체능 입시생 전략집 무료로 받기',
+      section_id: 'closing_cta',
+    })
+  }
+
   return (
-    <section className="bg-ink py-[96px] md:py-[128px] lg:py-[192px] relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="bg-ink py-[96px] md:py-[128px] lg:py-[192px] relative overflow-hidden"
+    >
       {/* 미묘한 그라데이션 오버레이 */}
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink to-[#050505]" />
       
@@ -42,6 +68,7 @@ export default function ClosingCTA() {
             rel="noopener noreferrer"
             role="button"
             className="group inline-block bg-brand-orange text-paper px-8 md:px-10 py-4 md:py-5 rounded-full font-semibold text-[16px] md:text-[18px] shadow-premium-orange hover:shadow-[0_20px_60px_rgba(235,90,20,0.4)] hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-brand-orange/30 focus:ring-offset-2 focus:ring-offset-ink"
+            onClick={handlePrimaryCtaClick}
           >
             <span className="relative z-10">예체능 입시생 전략집 무료로 받기</span>
           </a>

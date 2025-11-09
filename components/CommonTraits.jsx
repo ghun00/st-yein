@@ -1,6 +1,9 @@
-import Image from 'next/image'
+'use client'
+
 import SectionHeading from './SectionHeading'
 import ScrollAnimate from './ScrollAnimate'
+import { useRef } from 'react'
+import { useSectionViewTracking } from '../lib/useSectionViewTracking'
 
 /**
  * 공통점 목록 섹션 컴포넌트
@@ -13,8 +16,21 @@ export default function CommonTraits() {
     '양보다 \'지속\'을 선택해요',
   ]
 
+  const sectionRef = useRef(null)
+
+  useSectionViewTracking({
+    targetRef: sectionRef,
+    eventName: 'view_common_traits',
+    eventParams: {
+      section_id: 'common_traits',
+    },
+  })
+
   return (
-    <section className="bg-brand-orange py-[96px] md:py-[128px] lg:py-[192px] relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="bg-brand-orange py-[96px] md:py-[128px] lg:py-[192px] relative overflow-hidden"
+    >
       <div className="w-full max-w-content mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <ScrollAnimate animationType="fadeInUp" delay={0}>
           <SectionHeading className="mb-8 md:mb-12 text-center text-[20px] md:text-[32px] lg:text-[48px] leading-[1.4]">

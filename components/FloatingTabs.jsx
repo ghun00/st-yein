@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { sendGAEvent } from '../lib/ga'
 
 const TABS = [
   { path: '/freebook', label: '무료 전략 자료집' },
@@ -28,6 +29,12 @@ export default function FloatingTabs() {
             <Link
               key={tab.path}
               href={tab.path}
+              onClick={() => {
+                sendGAEvent('floating_tab_click', {
+                  tab_id: tab.path.replace('/', '') || 'home',
+                  tab_label: tab.label,
+                })
+              }}
               className={`
                 whitespace-nowrap px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-2.5 rounded-full text-[12px] sm:text-[14px] md:text-[16px] font-medium transition-all duration-300
                 ${

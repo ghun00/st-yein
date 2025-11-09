@@ -1,5 +1,8 @@
-import Image from 'next/image'
+'use client'
+
+import { useRef } from 'react'
 import ScrollAnimate from './ScrollAnimate'
+import { useSectionViewTracking } from '../lib/useSectionViewTracking'
 
 /**
  * 내용 목록 섹션 컴포넌트
@@ -24,8 +27,22 @@ export default function Contents() {
     },
   ]
 
+  const sectionRef = useRef(null)
+
+  useSectionViewTracking({
+    targetRef: sectionRef,
+    eventName: 'view_contents',
+    eventParams: {
+      section_id: 'contents',
+    },
+  })
+
   return (
-    <section id="guide" className="bg-ink relative overflow-hidden py-[96px] md:py-[128px] lg:py-[192px]">
+    <section
+      id="guide"
+      ref={sectionRef}
+      className="bg-ink relative overflow-hidden py-[96px] md:py-[128px] lg:py-[192px]"
+    >
       {/* 미묘한 그라데이션 오버레이 */}
       <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink to-[#050505]" />
       
