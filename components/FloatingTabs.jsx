@@ -6,7 +6,7 @@ import { sendGAEvent } from '../lib/ga'
 
 const TABS = [
   { path: '/freebook', label: '무료 전략 자료집' },
-  { path: '/winter', label: '윈터 특강' },
+  { path: '/winter', label: '윈터 스쿨' },
   { path: '/repeat', label: '재수 종합반' },
 ]
 
