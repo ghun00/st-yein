@@ -27,19 +27,21 @@ export default function WinterPage() {
     <main className="min-h-screen bg-[#050a1f] text-white pb-32 sm:pb-0">
       <FloatingTabs />
 
-      <section className="relative min-h-screen flex items-center justify-center pt-[0px] sm:pt-[120px] pb-24 sm:pb-28">
+      <section className="relative min-h-screen flex items-center justify-center pt-[24px] sm:pt-[120px] pb-24 sm:pb-28 overflow-hidden">
         {/* 배경 이미지 */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/winter_bg.png')" }}
           aria-hidden="true"
         />
+        <div className="absolute inset-0 pointer-events-none opacity-60 mix-blend-screen animate-snow" aria-hidden="true" />
+        <div className="absolute inset-[-20%] blur-3xl bg-[radial-gradient(circle_at_top,_rgba(120,169,255,0.35),_transparent_60%)] animate-aurora" aria-hidden="true" />
 
         <div
           className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10"
-          style={{ maxWidth: '1100px' }}
+          style={{ maxWidth: '1300px' }}
         >
-          <div className="text-white font-bold tracking-[0.12em] space-y-2">
+          <div className="text-white font-bold tracking-[0.12em] space-y-2 animate-hero">
             <p className="text-xl sm:hidden leading-snug">
               예체능 입시생을 위한
               <br />
@@ -50,13 +52,13 @@ export default function WinterPage() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center gap-6">
+          <div className="flex flex-col items-center gap-6 animate-hero-delay-1">
             <div className="hidden sm:block w-full">
               <Image
                 src="/images/winterTitle_pc.png"
                 alt="ST-예인 2026 윈터스쿨"
-                width={2200}
-                height={840}
+                width={2860}
+                height={1092}
                 priority
                 className="w-full h-auto"
               />
@@ -73,7 +75,7 @@ export default function WinterPage() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-3 sm:gap-4 w-full">
+          <div className="flex flex-col items-center gap-3 sm:gap-4 w-full animate-hero-delay-2">
             {timeline.map((item) => (
               <div
                 key={item.label}
