@@ -1,5 +1,13 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 
+@font-face {
+  font-family: 'ClimateCrisisKR-1979';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/ClimateCrisisKR-1979.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,31 +35,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--ink);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--brand-orange);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #d04a10;
-}
-
-/* Scrollbar hide utility for horizontal scrolling */
-.scrollbar-hide {
-  -ms-overflow-style: none;
+/* Hide all scrollbars for cleaner presentation */
+html,
+body {
   scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.scrollbar-hide::-webkit-scrollbar {
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
   display: none;
 }
 
