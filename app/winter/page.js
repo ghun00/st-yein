@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect } from 'react'
 import FloatingTabs from '../../components/FloatingTabs'
 
@@ -34,7 +35,10 @@ export default function WinterPage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 w-full max-w-[960px] mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
+        <div
+          className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10"
+          style={{ maxWidth: '1100px' }}
+        >
           <div className="text-white font-bold tracking-[0.12em] space-y-2">
             <p className="text-xl sm:hidden leading-snug">
               예체능 입시생을 위한
@@ -47,42 +51,26 @@ export default function WinterPage() {
           </div>
 
           <div className="flex flex-col items-center gap-6">
-            <section className="w-full justify-center hidden sm:flex">
-              <div
-                className="font-climate text-[clamp(48px,8vw,120px)] tracking-[-0.03em] drop-shadow-[0_8px_30px_rgba(0,0,0,0.35)]"
-                style={{
-                  lineHeight: '120%',
-                  background: 'linear-gradient(90deg, #fff 10%, #c6e1ff 45%, #e6f2ff 90%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  textFillColor: 'transparent',
-                }}
-              >
-                ST-예인
-              </div>
-            </section>
-            <section className="w-full flex justify-center">
-              <div
-                className="
-                  font-climate 
-                  text-[clamp(62px,12vw,150px)] 
-                  sm:text-[clamp(52px,9vw,132px)] 
-                  tracking-[-0.035em] 
-                  drop-shadow-[0_8px_30px_rgba(0,0,0,0.35)] 
-                  whitespace-nowrap 
-                  pb-6 
-                  sm:pb-8
-                "
-                style={{ lineHeight: '120%' }}
-              >
-                2026
-                <span className="sm:hidden">
-                  <br />
-                </span>
-                윈터스쿨
-              </div>
-            </section>
+            <div className="hidden sm:block w-full">
+              <Image
+                src="/images/winterTitle_pc.png"
+                alt="ST-예인 2026 윈터스쿨"
+                width={2200}
+                height={840}
+                priority
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="sm:hidden flex justify-center">
+              <Image
+                src="/images/winterTitle_mo.png"
+                alt="ST-예인 2026 윈터스쿨"
+                width={480}
+                height={360}
+                priority
+                className="w-full max-w-[360px] h-auto"
+              />
+            </div>
           </div>
 
           <div className="flex flex-col items-center gap-3 sm:gap-4 w-full">
@@ -106,7 +94,7 @@ export default function WinterPage() {
         </div>
       </section>
 
-      <div className="fixed bottom-12 inset-x-0 flex justify-center px-4 sm:px-0 z-40 pointer-events-none">
+      <div className="fixed bottom-10 inset-x-0 flex justify-center px-4 sm:px-0 z-40 pointer-events-none">
         <button
           type="button"
           className="pointer-events-auto inline-flex w-full max-w-[420px] items-center justify-center rounded-full bg-gradient-to-r from-[#ffdd83] via-[#ffb347] to-[#ff8650] px-10 py-4 text-base sm:text-lg font-bold text-[#492400] shadow-[0_24px_60px_rgba(255,149,64,0.55)] hover:-translate-y-1 transition-transform"

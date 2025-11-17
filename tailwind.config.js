@@ -15,7 +15,6 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Pretendard', 'Inter', 'system-ui', 'sans-serif'],
-        climate: ['"ClimateCrisisKR-1979"', 'sans-serif'],
       },
       maxWidth: {
         content: '1200px',
