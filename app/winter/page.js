@@ -7,12 +7,23 @@ import FloatingTabs from '../../components/FloatingTabs'
 const timeline = [
   {
     label: '개강 일자',
-    value: '2026년 1월 1일',
+    value: '2026년 1월 2일',
   },
   {
     label: '운영 기간',
     value: '2026년 2월 28일까지',
   },
+]
+
+const fiveToolTop = [
+  { label: '관리 전략' },
+  { label: '학습 전략' },
+]
+
+const fiveToolBottom = [
+  { label: '시험 전략' },
+  { label: '멘탈케어' },
+  { label: '입시컨설팅' },
 ]
 
 export default function WinterPage() {
@@ -93,6 +104,56 @@ export default function WinterPage() {
             ))}
           </div>
 
+        </div>
+      </section>
+
+      <section className="relative bg-[#0044FF] text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-0">
+        <div className="max-w-[1100px] mx-auto text-center space-y-10">
+          <div className="space-y-8 animate-hero">
+            <p className="text-[#B7D3FF] text-sm sm:text-base tracking-[0.32em] uppercase">
+              ONLY WINTER
+            </p>
+            <h2 className="text-[28px] sm:text-[48px] leading-tight font-extrabold">
+              예체능 입시생의 성적, 겨울방학에서 갈라집니다
+            </h2>
+            <p className="text-xl font-bold sm:text-3xl leading-relaxed sm:leading-[1.5] text-white/90 max-w-3xl mx-auto">
+              몇 안 되는 골든타임, 겨울방학. <br />어떻게 관리하느냐에 따라,<br />
+              3월 이후 성적 곡선이 완전히 달라집니다.
+            </p>
+          </div>
+
+          <div className="bg-white text-ink rounded-[32px] sm:rounded-[36px] px-6 sm:px-12 py-10 sm:py-14 space-y-10 shadow-[0_30px_120px_rgba(0,34,102,0.25)] animate-hero-delay-1">
+            <h3 className="text-[20px] sm:text-[28px] font-bold">
+              대치ST예인의 성적 향상 5-TOOL
+            </h3>
+
+            <div className="space-y-4 sm:space-y-6">
+              <div className="flex justify-center gap-4 sm:gap-6">
+                {fiveToolTop.map((item) => (
+                  <div
+                    key={item.label}
+                    className="w-[150px] sm:w-[220px] aspect-square rounded-full bg-[#E4F0FF] flex items-center justify-center text-[20px] sm:text-[36px] font-bold text-[#003B8E] shadow-[0_15px_30px_rgba(0,59,142,0.25)] border border-white/60 transition-transform hover:-translate-y-1"
+                  >
+                    {item.label}
+                  </div>
+                ))}
+              </div>
+              <div className="flex justify-center gap-4 sm:gap-6">
+                {fiveToolBottom.map((item) => (
+                  <div
+                    key={item.label}
+                    className="w-[120px] sm:w-[180px] aspect-square rounded-full bg-[#E4F0FF] flex items-center justify-center text-[18px] sm:text-[32px] font-bold text-[#003B8E] shadow-[0_15px_30px_rgba(0,59,142,0.25)] border border-white/60 transition-transform hover:-translate-y-1"
+                  >
+                    {item.label}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <p className="text-2xl sm:text-3xl font-extrabold animate-hero-delay-2">
+            겨울방학이 유일한 역전 타이밍입니다
+          </p>
         </div>
       </section>
 
