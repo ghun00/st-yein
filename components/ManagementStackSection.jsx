@@ -180,7 +180,7 @@ export default function ManagementStackSection() {
             >
               <div className="space-y-6 text-left">
                 <p className="text-[#1F57FF] text-sm font-semibold">{`0${activeIndex + 1}`}</p>
-                <h3 className="text-[28px] sm:text-[36px] font-bold text-[#0F1B3D] leading-snug">
+                <h3 className="text-[28px] sm:text-[32px] font-bold text-[#0F1B3D] leading-snug">
                   {stackCards[activeIndex].title}
                 </h3>
                 <p className="text-[#4A5570] text-base sm:text-2xl sm:leading-[1.4]">
