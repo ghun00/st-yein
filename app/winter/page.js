@@ -6,6 +6,7 @@ import FloatingTabs from '../../components/FloatingTabs'
 import ScoreSection from '../../components/ScoreSection'
 import ScrollReveal from '../../components/ScrollReveal'
 import ManagementStackSection from '../../components/ManagementStackSection'
+import SuccessStoriesSection from '../../components/SuccessStoriesSection'
 
 const timeline = [
   {
@@ -166,6 +167,7 @@ export default function WinterPage() {
 
       <ScoreSection />
       <ManagementStackSection />
+      <SuccessStoriesSection />
 
       <div className="fixed bottom-10 inset-x-0 flex justify-center px-4 sm:px-0 z-40 pointer-events-none">
         <button
