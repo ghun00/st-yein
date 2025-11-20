@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import FloatingTabs from '../../components/FloatingTabs'
 import ScoreSection from '../../components/ScoreSection'
 import ScrollReveal from '../../components/ScrollReveal'
+import ManagementStackSection from '../../components/ManagementStackSection'
 
 const timeline = [
   {
@@ -164,6 +165,7 @@ export default function WinterPage() {
       </section>
 
       <ScoreSection />
+      <ManagementStackSection />
 
       <div className="fixed bottom-10 inset-x-0 flex justify-center px-4 sm:px-0 z-40 pointer-events-none">
         <button

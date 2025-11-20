@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import ScrollReveal from './ScrollReveal'
 
@@ -31,9 +31,43 @@ const TAB_CONTENTS = [
   },
 ]
 
+const IMPROVEMENT_CASES = [
+  {
+    defaultSrc: '/images/examples/example1_default.png',
+    hoverSrc: '/images/examples/example1_open.png',
+    label: '성적 향상 사례 1',
+  },
+  {
+    defaultSrc: '/images/examples/example2_default.png',
+    hoverSrc: '/images/examples/example2_open.png',
+    label: '성적 향상 사례 2',
+  },
+  {
+    defaultSrc: '/images/examples/example3_default.png',
+    hoverSrc: '/images/examples/example3_open.png',
+    label: '성적 향상 사례 3',
+  },
+]
+
 export default function ScoreSection() {
   const [activeTab, setActiveTab] = useState(TAB_CONTENTS[0].id)
   const currentTab = TAB_CONTENTS.find((tab) => tab.id === activeTab)
+  const [isTouchDevice, setIsTouchDevice] = useState(false)
+  const [activeTouchCard, setActiveTouchCard] = useState(null)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const mq = window.matchMedia('(hover: none)')
+    const update = () => setIsTouchDevice(mq.matches)
+    update()
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
+
+  const handleCardToggle = (index) => {
+    if (!isTouchDevice) return
+    setActiveTouchCard((prev) => (prev === index ? null : index))
+  }
 
   return (
     <section className="bg-[#F3F6FF] py-16 sm:py-24">
@@ -86,18 +120,51 @@ export default function ScoreSection() {
           </div>
 
           <div className="rounded-[24px] bg-transparent h-[220px] sm:h-[300px] p-4 sm:p-6 flex justify-center items-center">
-  <div className="relative w-full h-full overflow-hidden rounded-[16px] flex items-center justify-center">
-    <Image
-      src={currentTab.image}
-      alt={currentTab.label}
-      // width/height 대신 fill + object-contain 사용
-      fill
-      className="object-contain"
-      priority={activeTab === 'routine'}
-    />
-  </div>
-</div>
+            <div className="relative w-full h-full overflow-hidden rounded-[16px] flex items-center justify-center">
+              <Image
+                src={currentTab.image}
+                alt={currentTab.label}
+                // width/height 대신 fill + object-contain 사용
+                fill
+                className="object-contain"
+                priority={activeTab === 'routine'}
+              />
+            </div>
+          </div>
 
+        </ScrollReveal>
+
+        <ScrollReveal delay={260} className="space-y-4">
+          <div className="flex flex-col gap-4 sm:gap-6">
+            {IMPROVEMENT_CASES.map((card, index) => (
+              <div
+                key={card.label}
+                className="group relative w-full overflow-hidden rounded-[24px] aspect-[4/1] shadow-[0_20px_40px_rgba(0,0,0,0.08)]"
+                onClick={() => handleCardToggle(index)}
+              >
+                <Image
+                  src={card.defaultSrc}
+                  alt={`${card.label} 기본`}
+                  fill
+                  className={`object-cover transition-opacity duration-300 ease-out ${
+                    isTouchDevice && activeTouchCard === index ? 'opacity-0' : 'opacity-100'
+                  } group-hover:opacity-0`}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 720px"
+                  priority={index === 0}
+                />
+                <Image
+                  src={card.hoverSrc}
+                  alt={`${card.label} 후기`}
+                  fill
+                  className={`object-cover transition-opacity duration-300 ease-out ${
+                    isTouchDevice && activeTouchCard === index ? 'opacity-100' : 'opacity-0'
+                  } group-hover:opacity-100`}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 720px"
+                  priority={index === 0}
+                />
+              </div>
+            ))}
+          </div>
         </ScrollReveal>
       </div>
     </section>
