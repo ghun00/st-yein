@@ -7,7 +7,7 @@ import ScrollReveal from './ScrollReveal'
 
 const stackCards = [
   {
-    title: '3중 담임 시스템이 하루의 리듬을 잡습니다',
+    title: '3중 관리 시스템이 하루의 리듬을 잡습니다',
     description:
       '반담임·교과 선생님·운영진이 함께 생활·학습·출결을 동시에 관리합니다. 안정적인 하루를 만들기 위해 매일 리듬을 점검합니다.',
     keywords: ['출결 관리', '생활 리듬', '3중 체제'],
@@ -40,11 +40,11 @@ const stackCards = [
 ]
 
 const dailyTimeline = [
-  '06:50 기상 문자',
+  '07:00 기상 문자',
   '07:50 등원 / 출결 인증 / 휴대폰 OFF 제출',
   '08:00 단어 테스트',
   '09:20 수업 시작',
-  '12:00 점심 / 관리',
+  '12:20 점심 / 관리',
   '17:00 자기주도학습 + 질의응답',
   '22:00 귀가 / 플래너 인증',
 ]
@@ -133,7 +133,7 @@ export default function ManagementStackSection() {
             MANAGEMENT SYSTEM
           </p>
           <h2 className="text-[32px] sm:text-[48px] font-extrabold text-[#0F1B3D] leading-tight">
-            관리를 관리에 더하다
+            관리에 관리를 더하다
             <br className="sm:hidden" />
           </h2>
           <p className="text-[#4A5570] text-md sm:text-2xl sm:leading-[1.5] font-semibold max-w-3xl mx-auto">
