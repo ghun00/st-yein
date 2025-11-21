@@ -176,7 +176,7 @@ export default function WinterPage() {
       <div className="fixed bottom-10 inset-x-0 flex justify-center px-4 sm:px-0 z-40 pointer-events-none">
         <button
           type="button"
-          onClick={() => window.open('https://naver.me/GbDRJ5zY', '_blank')}
+          onClick={() => window.open('https://m.booking.naver.com/booking/12/bizes/1285252/items/6376187?theme=place&service-target=map-pc&lang=ko&area=pll', '_blank')}
           className="pointer-events-auto inline-flex w-full max-w-[420px] items-center justify-center rounded-full bg-gradient-to-r from-[#ffdd83] via-[#ffb347] to-[#ff8650] px-10 py-4 text-base sm:text-lg font-bold text-[#492400] shadow-[0_24px_60px_rgba(255,149,64,0.55)] hover:-translate-y-1 transition-transform"
         >
           선착순 마감 전 신청 →
