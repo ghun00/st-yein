@@ -30,7 +30,7 @@ export default function FloatingTabs() {
   return (
     <nav className="fixed top-[40px] sm:top-[50px] md:top-[60px] left-1/2 transform -translate-x-1/2 z-50 animate-fade-in">
       <div 
-        className="flex gap-1 sm:gap-2 rounded-full px-2 sm:px-3 py-1.5 sm:py-2 md:py-2.5 shadow-premium border border-white/10 backdrop-blur-xl"
+        className="flex gap-1 sm:gap-2 rounded-full px-1.5 sm:px-2 md:px-3 py-1.5 sm:py-2 md:py-2.5 shadow-premium border border-white/10 backdrop-blur-xl"
         style={{ background: navBackground }}
       >
         {TABS.map((tab) => {
@@ -46,7 +46,8 @@ export default function FloatingTabs() {
                 })
               }}
               className={`
-                whitespace-nowrap px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-2.5 rounded-full text-[12px] sm:text-[14px] md:text-[16px] font-medium transition-all duration-300
+                w-[90px] sm:w-[110px] md:w-[130px] flex-shrink-0 text-center
+                whitespace-nowrap py-1.5 sm:py-2 md:py-2.5 rounded-full text-[11px] sm:text-[13px] md:text-[15px] font-medium transition-all duration-300
                 ${
                   isActive
                     ? activeTabClasses
