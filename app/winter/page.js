@@ -17,7 +17,7 @@ const timeline = [
   },
   {
     label: '운영 기간',
-    value: '2026년 2월 28일까지',
+    value: '2026년 2월 27일까지',
   },
 ]
 
