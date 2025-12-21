@@ -9,6 +9,7 @@ import ManagementStackSection from '../../components/ManagementStackSection'
 import SuccessStoriesSection from '../../components/SuccessStoriesSection'
 import WinterAdmissionSection from '../../components/WinterAdmissionSection'
 import WinterBrochureSection from '../../components/WinterBrochureSection'
+import NaverBanner from '../../components/NaverBanner'
 
 const timeline = [
   {
@@ -168,6 +169,11 @@ export default function WinterPage() {
       </section>
 
       <ScoreSection />
+      <section className="bg-[#F3F6FF] py-8 sm:py-12">
+        <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-0">
+          <NaverBanner />
+        </div>
+      </section>
       <ManagementStackSection />
       <SuccessStoriesSection />
       <WinterAdmissionSection />
