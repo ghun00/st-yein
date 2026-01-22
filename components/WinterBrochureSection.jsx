@@ -21,7 +21,7 @@ export default function WinterBrochureSection() {
             </div>
 
             <a
-              href="/st-yein-winter.pdf"
+              href="/2026winter_brochure.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-white text-[#111827] text-sm sm:text-base font-semibold px-6 sm:px-8 py-3 shadow-[0_18px_40px_rgba(0,0,0,0.35)] hover:bg-[#F3F4FF] hover:-translate-y-0.5 transition-all duration-200 whitespace-nowrap"
