@@ -17,13 +17,16 @@ const TABS = [
 export default function FloatingTabs() {
   const pathname = usePathname()
   const isWinterTheme = pathname?.startsWith('/winter')
+  const isRepeatTheme = pathname?.startsWith('/repeat')
   const navBackground = isWinterTheme
     ? 'linear-gradient(120deg, rgba(14, 34, 84, 0.92), rgba(33, 104, 223, 0.88))'
+    : isRepeatTheme
+    ? '#2FA599'
     : '#B4410480'
-  const activeTabClasses = isWinterTheme
+  const activeTabClasses = isWinterTheme || isRepeatTheme
     ? 'bg-white/95 text-[#0a1a3a] font-bold shadow-lg scale-105'
     : 'bg-ink/95 text-paper font-bold shadow-lg scale-105'
-  const inactiveTabClasses = isWinterTheme
+  const inactiveTabClasses = isWinterTheme || isRepeatTheme
     ? 'text-white/95 hover:text-white hover:bg-white/10 hover:scale-105'
     : 'text-white/95 hover:text-white hover:bg-white/15 hover:scale-105'
 
