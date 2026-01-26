@@ -758,7 +758,7 @@ function FloatingCTA() {
     <div className="fixed bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in">
       <button
         onClick={handleClick}
-        className="bg-gradient-to-r from-[#077a5e] via-[#27998d] to-[#01d3be] text-white font-bold text-base md:text-lg lg:text-xl px-8 md:px-10 lg:px-12 py-4 md:py-5 lg:py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#01d3be]/50"
+        className="bg-gradient-to-r from-[#077a5e] via-[#27998d] to-[#01d3be] text-white font-bold text-base md:text-lg lg:text-xl px-8 md:px-10 lg:px-12 py-4 md:py-5 lg:py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#01d3be]/50 whitespace-nowrap w-auto min-w-fit"
       >
         재종반 무료 상담 신청
       </button>
