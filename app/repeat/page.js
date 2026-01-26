@@ -347,7 +347,7 @@ function ManagementMethodSection() {
             <div className="content-stretch flex flex-col gap-[40px] md:gap-[50px] lg:gap-[60px] items-stretch relative shrink-0 w-full">
               {/* 학습 전략 */}
               <div className="content-stretch flex flex-col gap-[32px] md:gap-[40px] lg:gap-[48px] items-center relative rounded-[32px] shrink-0 w-full">
-                <ScrollReveal delay={200}>
+                <ScrollReveal delay={400}>
                   <div className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#077a5e] text-base md:text-xl lg:text-[36px] text-center w-full break-words">
                     <p className="mb-0 leading-[1.5]">성적은 공부 습관이 결정합니다.</p>
                     <p className="leading-[1.5]">대치 ST-예인은 반드시 성적을 올리는 학습 전략을 제공합니다.</p>
@@ -356,7 +356,7 @@ function ManagementMethodSection() {
                 
                 <div className="content-stretch flex flex-col gap-[24px] md:gap-[30px] lg:gap-[36px] items-stretch relative shrink-0 w-full">
                   {/* POINT 1 */}
-                  <ScrollReveal delay={300}>
+                  <ScrollReveal delay={400}>
                     <div className="bg-gradient-to-b from-[rgba(39,153,141,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,153,141,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
@@ -403,7 +403,7 @@ function ManagementMethodSection() {
                 </ScrollReveal>
 
                 {/* POINT 3 */}
-                <ScrollReveal delay={500}>
+                <ScrollReveal delay={400}>
                   <div className="bg-gradient-to-b from-[rgba(39,153,141,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,153,141,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
@@ -431,13 +431,13 @@ function ManagementMethodSection() {
 
             {/* 관리 강화 */}
             <div className="content-stretch flex flex-col gap-[32px] md:gap-[40px] lg:gap-[48px] items-center relative rounded-[32px] shrink-0 w-full">
-              <ScrollReveal delay={600}>
+              <ScrollReveal delay={400}>
                 <p className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#f05705] text-base md:text-xl lg:text-[36px] text-center w-full break-words">관리에 관리를 더하다</p>
               </ScrollReveal>
               
               <div className="content-stretch flex flex-col gap-[24px] md:gap-[30px] lg:gap-[36px] items-stretch relative shrink-0 w-full">
                 {/* POINT 1 */}
-                <ScrollReveal delay={700}>
+                <ScrollReveal delay={400}>
                   <div className="bg-gradient-to-b from-[rgba(153,90,39,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(161,76,7,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
@@ -456,7 +456,7 @@ function ManagementMethodSection() {
                 </ScrollReveal>
 
                 {/* POINT 2 */}
-                <ScrollReveal delay={800}>
+                <ScrollReveal delay={400}>
                   <div className="bg-gradient-to-b from-[rgba(153,90,39,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(161,76,7,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
@@ -481,7 +481,7 @@ function ManagementMethodSection() {
                 </ScrollReveal>
 
                 {/* POINT 3 */}
-                <ScrollReveal delay={900}>
+                <ScrollReveal delay={400}>
                   <div className="bg-gradient-to-b from-[rgba(153,90,39,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(161,76,7,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
@@ -506,13 +506,13 @@ function ManagementMethodSection() {
 
             {/* 강사진 및 수업 */}
             <div className="content-stretch flex flex-col gap-[32px] md:gap-[40px] lg:gap-[48px] items-center relative rounded-[32px] shrink-0 w-full">
-              <ScrollReveal delay={1000}>
+              <ScrollReveal delay={400}>
                 <p className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#0077b2] text-base md:text-xl lg:text-[36px] text-center w-full break-words">예체능 입시에 최적화된 강사진 및 수업</p>
               </ScrollReveal>
               
               <div className="content-stretch flex flex-col gap-[24px] md:gap-[30px] lg:gap-[36px] items-stretch relative shrink-0 w-full">
                 {/* POINT 1 */}
-                <ScrollReveal delay={1100}>
+                <ScrollReveal delay={400}>
                   <div className="bg-gradient-to-b from-[rgba(39,102,153,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,102,153,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
@@ -537,7 +537,7 @@ function ManagementMethodSection() {
                 </ScrollReveal>
 
                 {/* POINT 2 */}
-                <ScrollReveal delay={1200}>
+                <ScrollReveal delay={400}>
                   <div className="bg-gradient-to-b from-[rgba(39,102,153,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,102,153,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
@@ -562,7 +562,7 @@ function ManagementMethodSection() {
                 </ScrollReveal>
 
                 {/* POINT 3 */}
-                <ScrollReveal delay={1300}>
+                <ScrollReveal delay={400}>
                   <div className="bg-gradient-to-b from-[rgba(39,102,153,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,102,153,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
@@ -584,7 +584,7 @@ function ManagementMethodSection() {
                 </ScrollReveal>
 
                 {/* POINT 4 */}
-                <ScrollReveal delay={1400}>
+                <ScrollReveal delay={400}>
                   <div className="bg-gradient-to-b from-[rgba(39,102,153,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,102,153,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
@@ -677,7 +677,7 @@ function DailyManagementSection() {
             </div>
 
             {/* 후기 */}
-            <ScrollReveal delay={600}>
+            <ScrollReveal delay={400}>
               <div className="bg-[#077a5e] content-stretch flex flex-col gap-[24px] md:gap-[30px] lg:gap-[36px] items-center justify-center leading-[1.5] not-italic overflow-hidden p-6 md:p-10 lg:p-[48px] relative rounded-[32px] shrink-0 w-full max-w-[1200px]">
                 <div className="font-bold relative shrink-0 text-[#f8f8fc] text-sm md:text-base lg:text-[32px] w-full break-words">
                   <div className="flex flex-col gap-[12px] md:gap-[14px] lg:gap-[16px]">
@@ -703,7 +703,7 @@ function DailyManagementSection() {
               </div>
             </div>
 
-            <ScrollReveal delay={700}>
+            <ScrollReveal delay={500}>
               <div className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#353644] text-xl md:text-2xl lg:text-[48px] text-center break-words">
                 <p className="mb-0 leading-[1.5]">
                   <span>
