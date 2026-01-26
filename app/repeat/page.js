@@ -2,6 +2,7 @@
 
 import FloatingTabs from '../../components/FloatingTabs'
 import { sendGAEvent } from '../../lib/ga'
+import ScrollReveal from '../../components/ScrollReveal'
 
 // 히어로 섹션 - YouTube 영상 배경
 function HeroSection() {
@@ -143,17 +144,20 @@ function SuccessCasesSection() {
 
   return (
     <div className="bg-[#0d332f] content-stretch flex flex-col gap-[60px] md:gap-[80px] lg:gap-[120px] items-center overflow-hidden px-6 md:px-12 lg:px-[120px] py-12 md:py-16 lg:py-[80px] relative shrink-0 w-full">
-      <div className="content-stretch flex flex-col gap-[16px] items-center leading-[1.5] not-italic relative shrink-0 text-center">
-        <p className="font-medium relative shrink-0 text-[#e4e6f0] text-base md:text-xl lg:text-[32px] leading-[1.5]">2026학년도 실제 사례</p>
-        <div className="font-bold relative shrink-0 text-[#01d3be] text-xl md:text-2xl lg:text-[48px]">
-          <p className="mb-0 leading-[1.5]">그냥 재수 학원은 많지만,</p>
-          <p className="leading-[1.5]">예체능 재수 전문 종합반은 없습니다.</p>
+      <ScrollReveal delay={100}>
+        <div className="content-stretch flex flex-col gap-[16px] items-center leading-[1.5] not-italic relative shrink-0 text-center">
+          <p className="font-medium relative shrink-0 text-[#e4e6f0] text-base md:text-xl lg:text-[32px] leading-[1.5]">2026학년도 실제 사례</p>
+          <div className="font-bold relative shrink-0 text-[#01d3be] text-xl md:text-2xl lg:text-[48px]">
+            <p className="mb-0 leading-[1.5]">그냥 재수 학원은 많지만,</p>
+            <p className="leading-[1.5]">예체능 재수 전문 종합반은 없습니다.</p>
+          </div>
         </div>
-      </div>
+      </ScrollReveal>
 
       <div className="content-stretch flex flex-col gap-[40px] md:gap-[50px] lg:gap-[60px] items-center relative shrink-0 w-full max-w-[1200px]">
         {cases.map((caseItem, idx) => (
-          <div key={idx} className="content-stretch flex flex-col lg:flex-row gap-6 lg:gap-[60px] items-center relative shrink-0 w-full">
+          <ScrollReveal key={idx} delay={200 + idx * 150}>
+            <div className="content-stretch flex flex-col lg:flex-row gap-6 lg:gap-[60px] items-center relative shrink-0 w-full">
             {/* 왼쪽 카드 */}
             <div className="bg-gradient-to-r content-stretch flex from-[rgba(13,51,47,0.5)] min-h-[200px] lg:h-[200px] items-center justify-between pr-[16px] py-[24px] relative rounded-br-[99px] rounded-tr-[99px] shrink-0 to-[#27998d] w-full lg:w-[700px]">
               <div className="content-stretch flex flex-col gap-[16px] items-start justify-center leading-[1.5] not-italic relative shrink-0 flex-1 px-4 lg:px-0 min-w-0">
@@ -188,7 +192,8 @@ function SuccessCasesSection() {
               </div>
             </div>
           </div>
-        ))}
+            </ScrollReveal>
+          ))}
       </div>
     </div>
   )
@@ -201,50 +206,60 @@ function FailureReasonsSection() {
       <div className="flex flex-row items-center overflow-hidden rounded-[inherit] size-full">
         <div className="content-stretch flex items-center p-6 md:p-12 lg:p-[120px] relative w-full">
           <div className="content-stretch flex flex-col gap-[60px] md:gap-[80px] lg:gap-[120px] items-start not-italic relative shrink-0 w-full max-w-[1008px]">
-            <div className="font-bold leading-[1.5] relative shrink-0 text-xl md:text-2xl lg:text-[60px] text-white w-full break-words">
-              <p className="mb-0 leading-[1.5]">그렇다면,</p>
-              <p className="leading-[1.5]">왜 예체능 재수는 실패할까요?</p>
-            </div>
+            <ScrollReveal delay={100}>
+              <div className="font-bold leading-[1.5] relative shrink-0 text-2xl md:text-2xl lg:text-[60px] text-white w-full break-words">
+                <p className="mb-0 leading-[1.5]">그렇다면,</p>
+                <p className="leading-[1.5]">왜 예체능 재수는 실패할까요?</p>
+              </div>
+            </ScrollReveal>
             
             <div className="content-stretch flex flex-col gap-[50px] md:gap-[70px] lg:gap-[100px] items-start relative shrink-0 w-full">
-              <div className="content-stretch flex flex-col gap-[16px] md:gap-[24px] lg:gap-[32px] items-start relative shrink-0 w-full">
-                <p className="font-bold leading-[1.5] relative shrink-0 text-xl md:text-xl lg:text-[40px] text-white w-full break-words">
-                  <span className="text-[#fa6616]">실기만 잘하면 된다</span>
-                  <span>고 생각합니다.</span>
-                </p>
-                <div className="font-medium leading-[1.5] relative shrink-0 text-[#b7b9c9] text-sm md:text-base lg:text-[32px] w-full break-words flex flex-col gap-[16px]">
-                  <p className="mb-0 leading-[1.5]">"결국 대학은 실기로 뽑잖아요."</p>
-                  <p className="mb-0 leading-[1.5]">그래서 공부는 뒤로 미루죠.</p>
-                  <p className="leading-[1.5]">하지만 수능 점수가 받쳐주지 않는다면, 아무리 실기를 잘해도 합격할 수 없습니다.</p>
+              <ScrollReveal delay={200}>
+                <div className="content-stretch flex flex-col gap-[16px] md:gap-[24px] lg:gap-[32px] items-start relative shrink-0 w-full">
+                  <p className="font-bold leading-[1.5] relative shrink-0 text-xl md:text-xl lg:text-[40px] text-white w-full break-words">
+                    <span className="text-[#fa6616]">실기만 잘하면 된다</span>
+                    <span>고 생각합니다.</span>
+                  </p>
+                  <div className="font-medium leading-[1.5] relative shrink-0 text-[#b7b9c9] text-sm md:text-base lg:text-[32px] w-full break-words flex flex-col gap-[16px]">
+                    <p className="mb-0 leading-[1.5]">"결국 대학은 실기로 뽑잖아요."</p>
+                    <p className="mb-0 leading-[1.5]">그래서 공부는 뒤로 미루죠.</p>
+                    <p className="leading-[1.5]">하지만 수능 점수가 받쳐주지 않는다면, 아무리 실기를 잘해도 합격할 수 없습니다.</p>
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
 
-              <div className="content-stretch flex flex-col gap-[20px] md:gap-[24px] lg:gap-[29px] items-start relative shrink-0 w-full">
-                <p className="font-bold leading-[1.5] relative shrink-0 text-xl md:text-xl lg:text-[40px] text-white w-full break-words">
-                  <span>{`공부는 `}</span>
-                  <span className="text-[#fa6616]">혼자서도 잘할 수 있다</span>
-                  <span>고 생각합니다.</span>
-                </p>
-                <div className="font-medium leading-[1.5] relative shrink-0 text-[#b7b9c9] text-sm md:text-base lg:text-[32px] w-full break-words flex flex-col gap-[16px]">
-                  <p className="mb-0 leading-[1.5]">"관리까지는 필요 없어요. 알아서 할게요."</p>
-                  <p className="mb-0 leading-[1.5]">하지만 실제로는 스스로를 점검할 구조가 없습니다.</p>
-                  <p className="leading-[1.5]">계획은 무너지고, 불안은 커집니다.</p>
+              <ScrollReveal delay={350}>
+                <div className="content-stretch flex flex-col gap-[20px] md:gap-[24px] lg:gap-[29px] items-start relative shrink-0 w-full">
+                  <p className="font-bold leading-[1.5] relative shrink-0 text-xl md:text-xl lg:text-[40px] text-white w-full break-words">
+                    <span>{`공부는 `}</span>
+                    <span className="text-[#fa6616]">혼자서도 잘할 수 있다</span>
+                    <span>고 생각합니다.</span>
+                  </p>
+                  <div className="font-medium leading-[1.5] relative shrink-0 text-[#b7b9c9] text-sm md:text-base lg:text-[32px] w-full break-words flex flex-col gap-[16px]">
+                    <p className="mb-0 leading-[1.5]">"관리까지는 필요 없어요. 알아서 할게요."</p>
+                    <p className="mb-0 leading-[1.5]">하지만 실제로는 스스로를 점검할 구조가 없습니다.</p>
+                    <p className="leading-[1.5]">계획은 무너지고, 불안은 커집니다.</p>
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
 
-              <div className="content-stretch flex flex-col gap-[20px] md:gap-[24px] lg:gap-[29px] items-start relative shrink-0 w-full">
-                <p className="font-bold leading-[1.5] relative shrink-0 text-xl md:text-xl lg:text-[40px] text-white w-full break-words">
-                  <span className="text-[#fa6616]">자유로움이 곧 성적향상</span>
-                  <span>으로 이어진다고 생각합니다.</span>
-                </p>
-                <div className="font-medium leading-[1.5] relative shrink-0 text-[#b7b9c9] text-sm md:text-base lg:text-[32px] w-full break-words flex flex-col gap-[16px]">
-                  <p className="mb-0 leading-[1.5]">자고 싶은 대로 자고, 하고 싶은 대로 공부합니다.</p>
-                  <p className="leading-[1.5]">처음엔 자유롭지만, 결국 집중력과 체력은 바닥나죠.</p>
+              <ScrollReveal delay={500}>
+                <div className="content-stretch flex flex-col gap-[20px] md:gap-[24px] lg:gap-[29px] items-start relative shrink-0 w-full">
+                  <p className="font-bold leading-[1.5] relative shrink-0 text-xl md:text-xl lg:text-[40px] text-white w-full break-words">
+                    <span className="text-[#fa6616]">자유로움이 곧 성적향상</span>
+                    <span>으로 이어진다고 생각합니다.</span>
+                  </p>
+                  <div className="font-medium leading-[1.5] relative shrink-0 text-[#b7b9c9] text-sm md:text-base lg:text-[32px] w-full break-words flex flex-col gap-[16px]">
+                    <p className="mb-0 leading-[1.5]">자고 싶은 대로 자고, 하고 싶은 대로 공부합니다.</p>
+                    <p className="leading-[1.5]">처음엔 자유롭지만, 결국 집중력과 체력은 바닥나죠.</p>
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
             </div>
 
-            <p className="font-bold leading-[1.5] relative shrink-0 text-xl md:text-2xl lg:text-[48px] text-white w-full break-words">결국, 실패의 이유는 '관리의 부재'.</p>
+            <ScrollReveal delay={650}>
+              <p className="font-bold leading-[1.5] relative shrink-0 text-xl md:text-2xl lg:text-[48px] text-white w-full break-words">결국, 실패의 이유는 '관리의 부재'.</p>
+            </ScrollReveal>
           </div>
         </div>
       </div>
@@ -259,44 +274,54 @@ function SuccessMethodSection() {
       <div className="flex flex-col items-center overflow-hidden rounded-[inherit] size-full">
         <div className="content-stretch flex flex-col gap-[60px] md:gap-[80px] lg:gap-[120px] items-center px-6 md:px-12 lg:px-[149px] py-12 md:py-16 lg:py-[120px] relative w-full">
           <div className="content-stretch flex flex-col gap-[40px] md:gap-[50px] lg:gap-[60px] items-center relative shrink-0 w-full">
-            <p className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#353644] text-xl md:text-2xl lg:text-[48px] text-center break-words">예체능 재수, 이렇게 해야 성공합니다</p>
+            <ScrollReveal delay={100}>
+              <p className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#353644] text-xl md:text-2xl lg:text-[48px] text-center break-words">예체능 재수, 이렇게 해야 성공합니다</p>
+            </ScrollReveal>
             
-            <div className="content-stretch flex flex-col gap-[24px] md:gap-[28px] lg:gap-[32px] items-start relative shrink-0 w-full">
+            <div className="content-stretch flex flex-col gap-[24px] md:gap-[28px] lg:gap-[32px] items-stretch relative shrink-0 w-full">
               {[
                 "실기와 학습의 균형을 잡아야 합니다.",
                 "매일 꾸준한 루틴을 유지해야 합니다.",
                 "성적 불안과 슬럼프를 극복할 멘탈 관리가 필요합니다.",
                 "이 모든 과정을 끝까지 버틸 수 있는 관리 체계가 있어야 합니다."
               ].map((text, i) => (
-                <div key={i} className="bg-white relative rounded-[24px] shrink-0 w-full">
-                  <div className="flex flex-row items-center justify-center size-full">
-                    <div className="content-stretch flex items-center justify-center px-6 md:px-8 lg:px-[32px] py-6 md:py-6 lg:py-12 relative w-full min-w-0">
-                      <p className="font-semibold leading-[1.5] not-italic relative shrink-0 text-[#353644] text-sm md:text-base lg:text-[32px] text-center break-words">{text}</p>
+                <ScrollReveal key={i} delay={200 + i * 100}>
+                  <div className="bg-white relative rounded-[24px] shrink-0 w-full">
+                    <div className="flex flex-row items-center justify-center size-full">
+                      <div className="content-stretch flex items-center justify-center px-6 md:px-8 lg:px-[32px] py-6 md:py-6 lg:py-12 relative w-full min-w-0">
+                        <p className="font-semibold leading-[1.5] not-italic relative shrink-0 text-[#353644] text-sm md:text-base lg:text-[32px] text-center break-words w-full">{text}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>
 
           <div className="content-stretch flex flex-col gap-[40px] md:gap-[50px] lg:gap-[60px] items-center relative shrink-0 w-full max-w-[899px]">
-            <div className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#9395a6] text-xl md:text-2xl lg:text-[48px] text-center break-words">
-              <p className="mb-0 leading-[1.5]">이것들만 고려해서</p>
-              <p className="leading-[1.5]">재수 준비하면 되는거네요!</p>
-            </div>
+            <ScrollReveal delay={600}>
+              <div className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#9395a6] text-xl md:text-2xl lg:text-[48px] text-center break-words">
+                <p className="mb-0 leading-[1.5]">이것들만 고려해서</p>
+                <p className="leading-[1.5]">재수 준비하면 되는거네요!</p>
+              </div>
+            </ScrollReveal>
             
-            <div className="h-[104px] relative shrink-0 w-[24px]">
-              <svg className="block size-full" fill="none" viewBox="0 0 24 104">
-                <circle cx="12" cy="12" fill="#E4E6F0" r="12" />
-                <circle cx="12" cy="52" fill="#B7B9C9" r="12" />
-                <circle cx="12" cy="92" fill="#9395A6" r="12" />
-              </svg>
-            </div>
+            <ScrollReveal delay={700}>
+              <div className="h-[104px] relative shrink-0 w-[24px]">
+                <svg className="block size-full" fill="none" viewBox="0 0 24 104">
+                  <circle cx="12" cy="12" fill="#E4E6F0" r="12" />
+                  <circle cx="12" cy="52" fill="#B7B9C9" r="12" />
+                  <circle cx="12" cy="92" fill="#9395A6" r="12" />
+                </svg>
+              </div>
+            </ScrollReveal>
             
-            <div className="font-bold leading-[1.5] min-w-full not-italic relative shrink-0 text-[#353644] text-xl md:text-2xl lg:text-[48px] text-center w-[min-content] break-words">
-              <p className="mb-0 leading-[1.5]">말은 쉽지만,</p>
-              <p className="leading-[1.5]">이걸 혼자서 완벽히 해내기는 절대 불가능합니다.</p>
-            </div>
+            <ScrollReveal delay={800}>
+              <div className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#353644] text-xl md:text-2xl lg:text-[48px] text-center w-full break-words min-w-0">
+                <p className="mb-0 leading-[1.5]">말은 쉽지만,</p>
+                <p className="leading-[1.5]">이걸 혼자서 완벽히 해내기는 절대 불가능합니다.</p>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </div>
@@ -310,24 +335,29 @@ function ManagementMethodSection() {
     <div className="bg-[#f8f8fc] relative shrink-0 w-full">
       <div className="flex flex-col items-center overflow-hidden rounded-[inherit] size-full">
         <div className="content-stretch flex flex-col gap-[40px] md:gap-[60px] lg:gap-[80px] items-center px-6 md:px-12 lg:px-[120px] py-12 md:py-16 lg:py-[80px] relative w-full">
-          <div className="content-stretch flex flex-col gap-[24px] md:gap-[30px] lg:gap-[36px] items-center relative shrink-0 w-full max-w-[867px]">
-            <div className="bg-[#e4e6f0] content-stretch flex items-center justify-center px-6 md:px-8 lg:px-[32px] py-4 md:py-4 lg:py-[16px] relative rounded-[99px] shrink-0">
-              <p className="font-medium leading-[1.5] not-italic relative shrink-0 text-[#353644] text-sm md:text-base lg:text-[24px]">ST예인 관리</p>
-            </div>
-            <p className="font-bold leading-[1.5] min-w-full not-italic relative shrink-0 text-[#353644] text-xl md:text-2xl lg:text-[48px] text-center w-[min-content] break-words">그래서, 우리는 이렇게 합니다</p>
-          </div>
-
-          <div className="content-stretch flex flex-col gap-[40px] md:gap-[50px] lg:gap-[60px] items-start relative shrink-0 w-full">
-            {/* 학습 전략 */}
-            <div className="content-stretch flex flex-col gap-[32px] md:gap-[40px] lg:gap-[48px] items-center relative rounded-[32px] shrink-0 w-full">
-              <div className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#077a5e] text-base md:text-xl lg:text-[36px] text-center w-full break-words">
-                <p className="mb-0 leading-[1.5]">성적은 공부 습관이 결정합니다.</p>
-                <p className="leading-[1.5]">대치 ST-예인은 반드시 성적을 올리는 학습 전략을 제공합니다.</p>
+            <ScrollReveal delay={100}>
+              <div className="content-stretch flex flex-col gap-[24px] md:gap-[30px] lg:gap-[36px] items-center relative shrink-0 w-full max-w-[867px]">
+                <div className="bg-[#e4e6f0] content-stretch flex items-center justify-center px-6 md:px-8 lg:px-[32px] py-4 md:py-4 lg:py-[16px] relative rounded-[99px] shrink-0">
+                  <p className="font-medium leading-[1.5] not-italic relative shrink-0 text-[#353644] text-sm md:text-base lg:text-[24px]">ST예인 관리</p>
+                </div>
+                <p className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#353644] text-xl md:text-2xl lg:text-[48px] text-center w-full break-words min-w-0">그래서, 우리는 이렇게 합니다</p>
               </div>
-              
-              <div className="content-stretch flex flex-col gap-[24px] md:gap-[30px] lg:gap-[36px] items-start relative shrink-0 w-full">
-                {/* POINT 1 */}
-                <div className="bg-gradient-to-b from-[rgba(39,153,141,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,153,141,0)] w-full overflow-visible md:overflow-hidden">
+            </ScrollReveal>
+
+            <div className="content-stretch flex flex-col gap-[40px] md:gap-[50px] lg:gap-[60px] items-stretch relative shrink-0 w-full">
+              {/* 학습 전략 */}
+              <div className="content-stretch flex flex-col gap-[32px] md:gap-[40px] lg:gap-[48px] items-center relative rounded-[32px] shrink-0 w-full">
+                <ScrollReveal delay={200}>
+                  <div className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#077a5e] text-base md:text-xl lg:text-[36px] text-center w-full break-words">
+                    <p className="mb-0 leading-[1.5]">성적은 공부 습관이 결정합니다.</p>
+                    <p className="leading-[1.5]">대치 ST-예인은 반드시 성적을 올리는 학습 전략을 제공합니다.</p>
+                  </div>
+                </ScrollReveal>
+                
+                <div className="content-stretch flex flex-col gap-[24px] md:gap-[30px] lg:gap-[36px] items-stretch relative shrink-0 w-full">
+                  {/* POINT 1 */}
+                  <ScrollReveal delay={300}>
+                    <div className="bg-gradient-to-b from-[rgba(39,153,141,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,153,141,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
                       <div className="content-stretch flex flex-col gap-[16px] items-start leading-[1.5] relative shrink-0 w-full md:w-[300px] min-w-0">
@@ -347,10 +377,12 @@ function ManagementMethodSection() {
                       </ul>
                     </div>
                   </div>
-                </div>
+                    </div>
+                  </ScrollReveal>
 
                 {/* POINT 2 */}
-                <div className="bg-gradient-to-b from-[rgba(39,153,141,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,153,141,0)] w-full overflow-visible md:overflow-hidden">
+                <ScrollReveal delay={400}>
+                  <div className="bg-gradient-to-b from-[rgba(39,153,141,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,153,141,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
                       <div className="content-stretch flex flex-col gap-[16px] items-start leading-[1.5] relative shrink-0 w-full md:w-[300px] min-w-0">
@@ -367,10 +399,12 @@ function ManagementMethodSection() {
                       </ul>
                     </div>
                   </div>
-                </div>
+                  </div>
+                </ScrollReveal>
 
                 {/* POINT 3 */}
-                <div className="bg-gradient-to-b from-[rgba(39,153,141,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,153,141,0)] w-full overflow-visible md:overflow-hidden">
+                <ScrollReveal delay={500}>
+                  <div className="bg-gradient-to-b from-[rgba(39,153,141,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,153,141,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
                       <div className="content-stretch flex flex-col gap-[16px] items-start leading-[1.5] relative shrink-0 w-full md:w-[300px] min-w-0">
@@ -390,17 +424,21 @@ function ManagementMethodSection() {
                       </ul>
                     </div>
                   </div>
-                </div>
+                  </div>
+                </ScrollReveal>
               </div>
             </div>
 
             {/* 관리 강화 */}
             <div className="content-stretch flex flex-col gap-[32px] md:gap-[40px] lg:gap-[48px] items-center relative rounded-[32px] shrink-0 w-full">
-              <p className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#f05705] text-base md:text-xl lg:text-[36px] text-center w-full break-words">관리에 관리를 더하다</p>
+              <ScrollReveal delay={600}>
+                <p className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#f05705] text-base md:text-xl lg:text-[36px] text-center w-full break-words">관리에 관리를 더하다</p>
+              </ScrollReveal>
               
-              <div className="content-stretch flex flex-col gap-[24px] md:gap-[30px] lg:gap-[36px] items-start relative shrink-0 w-full">
+              <div className="content-stretch flex flex-col gap-[24px] md:gap-[30px] lg:gap-[36px] items-stretch relative shrink-0 w-full">
                 {/* POINT 1 */}
-                <div className="bg-gradient-to-b from-[rgba(153,90,39,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(161,76,7,0)] w-full overflow-visible md:overflow-hidden">
+                <ScrollReveal delay={700}>
+                  <div className="bg-gradient-to-b from-[rgba(153,90,39,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(161,76,7,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
                       <div className="content-stretch flex flex-col gap-[16px] items-start leading-[1.5] relative shrink-0 w-full md:w-[300px] min-w-0">
@@ -414,10 +452,12 @@ function ManagementMethodSection() {
                       </ul>
                     </div>
                   </div>
-                </div>
+                  </div>
+                </ScrollReveal>
 
                 {/* POINT 2 */}
-                <div className="bg-gradient-to-b from-[rgba(153,90,39,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(161,76,7,0)] w-full overflow-visible md:overflow-hidden">
+                <ScrollReveal delay={800}>
+                  <div className="bg-gradient-to-b from-[rgba(153,90,39,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(161,76,7,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
                       <div className="content-stretch flex flex-col gap-[16px] items-start leading-[1.5] relative shrink-0 w-full md:w-[300px] min-w-0">
@@ -437,10 +477,12 @@ function ManagementMethodSection() {
                       </ul>
                     </div>
                   </div>
-                </div>
+                  </div>
+                </ScrollReveal>
 
                 {/* POINT 3 */}
-                <div className="bg-gradient-to-b from-[rgba(153,90,39,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(161,76,7,0)] w-full overflow-visible md:overflow-hidden">
+                <ScrollReveal delay={900}>
+                  <div className="bg-gradient-to-b from-[rgba(153,90,39,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(161,76,7,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
                       <div className="content-stretch flex flex-col gap-[16px] items-start leading-[1.5] relative shrink-0 w-full md:w-[300px] min-w-0">
@@ -457,17 +499,21 @@ function ManagementMethodSection() {
                       </ul>
                     </div>
                   </div>
-                </div>
+                  </div>
+                </ScrollReveal>
               </div>
             </div>
 
             {/* 강사진 및 수업 */}
             <div className="content-stretch flex flex-col gap-[32px] md:gap-[40px] lg:gap-[48px] items-center relative rounded-[32px] shrink-0 w-full">
-              <p className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#0077b2] text-base md:text-xl lg:text-[36px] text-center w-full break-words">예체능 입시에 최적화된 강사진 및 수업</p>
+              <ScrollReveal delay={1000}>
+                <p className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#0077b2] text-base md:text-xl lg:text-[36px] text-center w-full break-words">예체능 입시에 최적화된 강사진 및 수업</p>
+              </ScrollReveal>
               
-              <div className="content-stretch flex flex-col gap-[24px] md:gap-[30px] lg:gap-[36px] items-start relative shrink-0 w-full">
+              <div className="content-stretch flex flex-col gap-[24px] md:gap-[30px] lg:gap-[36px] items-stretch relative shrink-0 w-full">
                 {/* POINT 1 */}
-                <div className="bg-gradient-to-b from-[rgba(39,102,153,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,102,153,0)] w-full overflow-visible md:overflow-hidden">
+                <ScrollReveal delay={1100}>
+                  <div className="bg-gradient-to-b from-[rgba(39,102,153,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,102,153,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
                       <div className="content-stretch flex flex-col gap-[16px] items-start leading-[1.5] relative shrink-0 w-full md:w-[300px] min-w-0">
@@ -487,10 +533,12 @@ function ManagementMethodSection() {
                       </ul>
                     </div>
                   </div>
-                </div>
+                  </div>
+                </ScrollReveal>
 
                 {/* POINT 2 */}
-                <div className="bg-gradient-to-b from-[rgba(39,102,153,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,102,153,0)] w-full overflow-visible md:overflow-hidden">
+                <ScrollReveal delay={1200}>
+                  <div className="bg-gradient-to-b from-[rgba(39,102,153,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,102,153,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
                       <div className="content-stretch flex flex-col gap-[16px] items-start leading-[1.5] relative shrink-0 w-full md:w-[300px] min-w-0">
@@ -510,10 +558,12 @@ function ManagementMethodSection() {
                       </ul>
                     </div>
                   </div>
-                </div>
+                  </div>
+                </ScrollReveal>
 
                 {/* POINT 3 */}
-                <div className="bg-gradient-to-b from-[rgba(39,102,153,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,102,153,0)] w-full overflow-visible md:overflow-hidden">
+                <ScrollReveal delay={1300}>
+                  <div className="bg-gradient-to-b from-[rgba(39,102,153,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,102,153,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
                       <div className="content-stretch flex flex-col gap-[16px] items-start leading-[1.5] relative shrink-0 w-full md:w-[300px] min-w-0">
@@ -530,10 +580,12 @@ function ManagementMethodSection() {
                       </ul>
                     </div>
                   </div>
-                </div>
+                  </div>
+                </ScrollReveal>
 
                 {/* POINT 4 */}
-                <div className="bg-gradient-to-b from-[rgba(39,102,153,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,102,153,0)] w-full overflow-visible md:overflow-hidden">
+                <ScrollReveal delay={1400}>
+                  <div className="bg-gradient-to-b from-[rgba(39,102,153,0.15)] relative rounded-[24px] md:rounded-[48px] shrink-0 to-[rgba(39,102,153,0)] w-full overflow-visible md:overflow-hidden">
                   <div className="flex flex-col md:flex-row items-start md:items-center w-full h-auto md:size-full">
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
                       <div className="content-stretch flex flex-col gap-[16px] items-start leading-[1.5] relative shrink-0 w-full md:w-[300px] min-w-0">
@@ -550,7 +602,8 @@ function ManagementMethodSection() {
                       </ul>
                     </div>
                   </div>
-                </div>
+                  </div>
+                </ScrollReveal>
               </div>
             </div>
           </div>
@@ -564,36 +617,39 @@ function ManagementMethodSection() {
 function DailyManagementSection() {
   return (
     <div className="bg-white relative shrink-0 w-full">
-      <div className="flex flex-col items-center overflow-hidden rounded-[inherit] size-full">
-        <div className="content-stretch flex flex-col gap-[40px] md:gap-[60px] lg:gap-[80px] items-center px-6 md:px-12 lg:px-[120px] py-12 md:py-16 lg:py-[80px] relative w-full">
-          <div className="content-stretch flex flex-col gap-[20px] md:gap-[24px] items-start leading-[1.5] not-italic relative shrink-0 text-[#353644] text-center w-full max-w-[805.5px]">
-            <div className="font-bold relative shrink-0 text-xl md:text-2xl lg:text-[48px] w-full break-words">
-              <p className="mb-0 leading-[1.5]">빈틈 없는 관리는 필수!</p>
-              <p className="leading-[1.5]">예체능 재수 성공 전략의 9할은 관리입니다.</p>
-            </div>
-            <p className="font-medium relative shrink-0 text-base md:text-xl lg:text-[36px] w-full break-words">"학생의 하루 시작부터 마무리까지 모두 관리합니다."</p>
-          </div>
+        <div className="flex flex-col items-center overflow-hidden rounded-[inherit] size-full">
+          <div className="content-stretch flex flex-col gap-[40px] md:gap-[60px] lg:gap-[80px] items-center px-6 md:px-12 lg:px-[120px] py-12 md:py-16 lg:py-[80px] relative w-full">
+            <ScrollReveal delay={100}>
+              <div className="content-stretch flex flex-col gap-[20px] md:gap-[24px] items-start leading-[1.5] not-italic relative shrink-0 text-[#353644] text-center w-full max-w-[805.5px]">
+                <div className="font-bold relative shrink-0 text-xl md:text-2xl lg:text-[48px] w-full break-words">
+                  <p className="mb-0 leading-[1.5]">빈틈 없는 관리는 필수!</p>
+                  <p className="leading-[1.5]">예체능 재수 성공 전략의 9할은 관리입니다.</p>
+                </div>
+                <p className="font-medium relative shrink-0 text-base md:text-xl lg:text-[36px] w-full break-words">"학생의 하루 시작부터 마무리까지 모두 관리합니다."</p>
+              </div>
+            </ScrollReveal>
 
-          <div className="content-stretch flex flex-col lg:flex-row lg:flex-nowrap gap-6 lg:gap-[48px] items-center relative shrink-0 w-full lg:overflow-x-auto lg:overflow-y-hidden lg:pb-4">
-            {[
-              {
-                title: "기상 관리",
-                description: "오전 6시 30분 이전 기상 확인 문자 등록을 시작으로 하루의 시작을 규칙적으로 만들고 늦잠·지각을 원천 차단"
-              },
-              {
-                title: "등원 관리",
-                description: "오전 7시 50분까지 등원 필수 출결을 엄격히 관리하여 생활 리듬 고정학원 내에서 학생 간 불필요한 잡담·사고 금지"
-              },
-              {
-                title: "엄격한 생활 규율",
-                description: "학원 규칙에 따른 엄격한 관리와 벌점제 시행 실기 병행 학생도 동일하게 생활 관리 적용지각·결석·조퇴 모두 학부모에게 실시간 보고"
-              },
-              {
-                title: "귀가 관리",
-                description: "12시 00분 이전까지 단톡방에 플래너 내용 전송 필수. 지각시 벌점 적용. 플래너 전송 후 취침할 수 있도록 지도 진행."
-              }
-            ].map((item, i) => (
-              <div key={i} className="content-stretch flex flex-col items-start overflow-hidden relative rounded-[32px] shrink-0 flex-shrink-0 w-full lg:w-[534px]">
+            <div className="content-stretch flex flex-col lg:flex-row lg:flex-nowrap gap-6 lg:gap-[48px] items-center relative shrink-0 w-full lg:overflow-x-auto lg:overflow-y-hidden lg:pb-4">
+              {[
+                {
+                  title: "기상 관리",
+                  description: "오전 6시 30분 이전 기상 확인 문자 등록을 시작으로 하루의 시작을 규칙적으로 만들고 늦잠·지각을 원천 차단"
+                },
+                {
+                  title: "등원 관리",
+                  description: "오전 7시 50분까지 등원 필수 출결을 엄격히 관리하여 생활 리듬 고정학원 내에서 학생 간 불필요한 잡담·사고 금지"
+                },
+                {
+                  title: "엄격한 생활 규율",
+                  description: "학원 규칙에 따른 엄격한 관리와 벌점제 시행 실기 병행 학생도 동일하게 생활 관리 적용지각·결석·조퇴 모두 학부모에게 실시간 보고"
+                },
+                {
+                  title: "귀가 관리",
+                  description: "12시 00분 이전까지 단톡방에 플래너 내용 전송 필수. 지각시 벌점 적용. 플래너 전송 후 취침할 수 있도록 지도 진행."
+                }
+              ].map((item, i) => (
+                <ScrollReveal key={i} delay={200 + i * 100}>
+                  <div className="content-stretch flex flex-col items-start overflow-hidden relative rounded-[32px] shrink-0 flex-shrink-0 w-full lg:w-[534px]">
                 <div className="bg-[#f8f8fc] relative shrink-0 w-full">
                   <div className="overflow-hidden rounded-[inherit] size-full">
                     <div className="content-stretch flex flex-col gap-[20px] items-start leading-[1.5] not-italic px-6 md:px-8 lg:px-[36px] py-8 md:py-10 lg:py-[48px] relative text-[#353644] w-full min-w-0">
@@ -616,44 +672,49 @@ function DailyManagementSection() {
                   />
                 </div>
               </div>
-            ))}
-          </div>
+                </ScrollReveal>
+              ))}
+            </div>
 
-          {/* 후기 */}
-          <div className="bg-[#077a5e] content-stretch flex flex-col gap-[24px] md:gap-[30px] lg:gap-[36px] items-center justify-center leading-[1.5] not-italic overflow-hidden p-6 md:p-10 lg:p-[48px] relative rounded-[32px] shrink-0 w-full max-w-[1200px]">
-            <div className="font-bold relative shrink-0 text-[#f8f8fc] text-sm md:text-base lg:text-[32px] w-full break-words">
-              <div className="flex flex-col gap-[12px] md:gap-[14px] lg:gap-[16px]">
-                <p className="mb-0 leading-[1.5]">플래닝과 모의고사 점검은 굉장히 유익했습니다. 플래닝을 통해 생활 및 공부 습관을 기록하며 매일의 삶에 집중했고, 시험 당일 진행한 모의고사 복기는 다음 공부 방향을 잡는데 수월했습니다. 현역 때와는 차원이 다른 복기를 경험하며 시간 관리와 마인드 세팅까지 큰 도움을 받았습니다.언제나 준비가 되어 있었던 선생님들 덕분에 망설임 없이 도움을 요청하며 재수 생활을 성공적으로 마칠 수 있었습니다.</p>
+            {/* 후기 */}
+            <ScrollReveal delay={600}>
+              <div className="bg-[#077a5e] content-stretch flex flex-col gap-[24px] md:gap-[30px] lg:gap-[36px] items-center justify-center leading-[1.5] not-italic overflow-hidden p-6 md:p-10 lg:p-[48px] relative rounded-[32px] shrink-0 w-full max-w-[1200px]">
+                <div className="font-bold relative shrink-0 text-[#f8f8fc] text-sm md:text-base lg:text-[32px] w-full break-words">
+                  <div className="flex flex-col gap-[12px] md:gap-[14px] lg:gap-[16px]">
+                    <p className="mb-0 leading-[1.5]">플래닝과 모의고사 점검은 굉장히 유익했습니다. 플래닝을 통해 생활 및 공부 습관을 기록하며 매일의 삶에 집중했고, 시험 당일 진행한 모의고사 복기는 다음 공부 방향을 잡는데 수월했습니다. 현역 때와는 차원이 다른 복기를 경험하며 시간 관리와 마인드 세팅까지 큰 도움을 받았습니다.언제나 준비가 되어 있었던 선생님들 덕분에 망설임 없이 도움을 요청하며 재수 생활을 성공적으로 마칠 수 있었습니다.</p>
+                  </div>
+                </div>
+                <p className="font-medium relative shrink-0 text-[#f3f4fa] text-xs md:text-sm lg:text-[24px] w-full break-words leading-[1.5]">국민대학교 회화과 합격생 김OO</p>
+              </div>
+            </ScrollReveal>
+
+            {/* 영상 */}
+            <div className="content-stretch flex items-start relative shrink-0 w-full max-w-[1200px]">
+              <div className="aspect-[560/315] w-full overflow-hidden relative rounded-[12px]">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/HWneuJ9ix0w?si=JKB8TnOScO5f9h-o&controls=0&autoplay=1&mute=1&loop=1&playlist=HWneuJ9ix0w"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
               </div>
             </div>
-            <p className="font-medium relative shrink-0 text-[#f3f4fa] text-xs md:text-sm lg:text-[24px] w-full break-words leading-[1.5]">국민대학교 회화과 합격생 김OO</p>
-          </div>
 
-          {/* 영상 */}
-          <div className="content-stretch flex items-start relative shrink-0 w-full max-w-[1200px]">
-            <div className="aspect-[560/315] w-full overflow-hidden relative rounded-[12px]">
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/HWneuJ9ix0w?si=JKB8TnOScO5f9h-o&controls=0&autoplay=1&mute=1&loop=1&playlist=HWneuJ9ix0w"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            </div>
-          </div>
-
-          <div className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#353644] text-xl md:text-2xl lg:text-[48px] text-center break-words">
-            <p className="mb-0 leading-[1.5]">
-              <span>
-                단순한 수업과 훈련을 넘어, 생활 전체를 설계하고 관리합니다.
-                <br aria-hidden="true" />{" "}
-              </span>
-              <span className="text-[#077a5e]">재수의 불안함을 '확실한 관리'로 바꾸는 것,</span>
-            </p>
-            <p className="leading-[1.5]">그것이 우리의 합격 전략입니다.</p>
-          </div>
+            <ScrollReveal delay={700}>
+              <div className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#353644] text-xl md:text-2xl lg:text-[48px] text-center break-words">
+                <p className="mb-0 leading-[1.5]">
+                  <span>
+                    단순한 수업과 훈련을 넘어, 생활 전체를 설계하고 관리합니다.
+                    <br aria-hidden="true" />{" "}
+                  </span>
+                  <span className="text-[#077a5e]">재수의 불안함을 '확실한 관리'로 바꾸는 것,</span>
+                </p>
+                <p className="leading-[1.5]">그것이 우리의 합격 전략입니다.</p>
+              </div>
+            </ScrollReveal>
         </div>
       </div>
     </div>
@@ -667,9 +728,13 @@ function FinalCTASection() {
       <div className="flex flex-col items-center overflow-hidden rounded-[inherit] size-full">
         <div className="content-stretch flex flex-col gap-[40px] md:gap-[50px] lg:gap-[60px] items-center p-6 md:p-12 lg:p-[120px] relative w-full">
           <p className="font-semibold leading-[1.5] min-w-full not-italic relative shrink-0 text-[#f8f8fc] text-xl md:text-2xl lg:text-[48px] text-center w-[min-content] break-words">"혼자가 아닌 1:1 맞춤 관리, 그 끝은 당신이 꿈꾸던 합격입니다."</p>
-          <div className="bg-[#f8f8fc] content-stretch flex items-center justify-center px-8 md:px-16 lg:px-[36px] py-4 md:py-4 lg:py-[24px] relative rounded-[12px] shrink-0 cursor-pointer hover:bg-[#e4e6f0] transition-colors">
+          <a 
+            href="/26_repeat_brochure.pdf" 
+            download="26_repeat_brochure.pdf"
+            className="bg-[#f8f8fc] content-stretch flex items-center justify-center px-8 md:px-16 lg:px-[36px] py-4 md:py-4 lg:py-[24px] relative rounded-[12px] shrink-0 cursor-pointer hover:bg-[#e4e6f0] transition-colors no-underline"
+          >
             <p className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#077a5e] text-sm md:text-base lg:text-[24px] break-words">ST예인 재수종합반 상세 브로셔 다운로드</p>
-          </div>
+          </a>
         </div>
       </div>
     </div>
