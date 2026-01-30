@@ -791,10 +791,10 @@ function FloatingPhone() {
   return (
     <a
       href="tel:050714958915"
-      className="fixed bottom-6 md:bottom-8 right-6 md:right-12 z-50 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#0D332F] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#01d3be]/50 animate-fade-in"
+      className="fixed bottom-6 md:bottom-8 right-4 md:right-12 z-50 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#0D332F] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#01d3be]/50 animate-fade-in"
       aria-label="전화 걸기 0507-1495-8915"
     >
-      <FaPhone className="w-6 h-6 md:w-7 md:h-7" />
+      <FaPhone className="w-4 h-4 md:w-7 md:h-7" />
     </a>
   )
 }
