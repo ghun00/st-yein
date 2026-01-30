@@ -3,6 +3,7 @@
 import FloatingTabs from '../../components/FloatingTabs'
 import { sendGAEvent } from '../../lib/ga'
 import ScrollReveal from '../../components/ScrollReveal'
+import { FaPhone } from 'react-icons/fa6'
 
 // 히어로 섹션 - YouTube 영상 배경
 function HeroSection() {
@@ -51,9 +52,9 @@ function HeroSection() {
       <div className="absolute left-4 md:left-[60px] lg:left-[120px] bottom-[10%] z-10 px-4 md:px-0">
         <div className="font-bold font-extrabold leading-[1.5] not-italic relative shrink-0 text-white text-3xl md:text-3xl lg:text-[60px]">
           <p className="mb-0 leading-[1.5]">
-            <span>예체능 재수생은 왜,</span>
+            <span>예체능 재수생은</span>
           </p>
-          <p className="leading-[1.5]">예체능 전문 종합 관리를 받아야할까요?</p>
+          <p className="leading-[1.5]">왜, 예체능 전문 종합 학원에서 관리를 받아야할까요?</p>
         </div>
       </div>
     </div>
@@ -101,17 +102,33 @@ function WhySection() {
 function SuccessCasesSection() {
   const cases = [
     {
+      name: "김00",
+      major: "디자인",
+      quote: "불수능을 현실로 증명하다!\n백분위 184 UP, 탐구 8등급 UP",
+      scores: ["국어 : 4 → 1", "수학 : 5 → 3", "영어 : 4 → 2", "탐구 : 6 → 1", "탐구 : 6 → 1"],
+      improvement: "15",
+      avatar: "/images/Frame 46723-1.png"
+    },
+    {
       name: "임OO",
       major: "디자인",
-      quote: "상상 그이상, 기적 같은 반전!",
+      quote: "상상 그이상, 기적 같은 반전!\n수학, 노베 7 → 2",
       scores: ["국어 : 4 → 1", "수학 : 7 → 2", "영어 : 2 → 2", "탐구 : 4 → 1", "탐구 : 4 → 2"],
       improvement: "13",
+      avatar: "/images/Frame 46723-4.png"
+    },
+    {
+      name: "박OO",
+      major: "디자인",
+      quote: "재수를 ST-예인에서 했다면..\n국어 3등급 UP, 탐구 8등급 UP",
+      scores: ["국어 : 6 → 3", "영어 : 5 → 5", "탐구 : 6 → 2", "탐구 : 5 → 1"],
+      improvement: "11",
       avatar: "/images/Frame 46723-1.png"
     },
     {
       name: "여OO",
       major: "디자인",
-      quote: "불수능의 끝판왕, 대학은 내가 정한다!",
+      quote: "불수능의 끝판왕, 대학은 내가 정한다!\n국어, 탐구 → All 1등급",
       scores: ["국어 : 2 → 1", "수학 : 6 → 4", "영어 : 2 → 2", "탐구 : 3 → 1", "탐구 : 3 → 1"],
       improvement: "7",
       avatar: "/images/Frame 46723-2.png"
@@ -149,7 +166,7 @@ function SuccessCasesSection() {
           <p className="font-medium relative shrink-0 text-[#e4e6f0] text-base md:text-xl lg:text-[32px] leading-[1.5]">2026학년도 실제 사례</p>
           <div className="font-bold relative shrink-0 text-[#01d3be] text-xl md:text-2xl lg:text-[48px]">
             <p className="mb-0 leading-[1.5]">그냥 재수 학원은 많지만,</p>
-            <p className="leading-[1.5]">예체능 재수 전문 종합반은 없습니다.</p>
+            <p className="leading-[1.5]">예체능 전문 재수 종합반은 찾기가 어렵습니다.</p>
           </div>
         </div>
       </ScrollReveal>
@@ -223,7 +240,7 @@ function FailureReasonsSection() {
                   <div className="font-medium leading-[1.5] relative shrink-0 text-[#b7b9c9] text-sm md:text-base lg:text-[32px] w-full break-words flex flex-col gap-[16px]">
                     <p className="mb-0 leading-[1.5]">"결국 대학은 실기로 뽑잖아요."</p>
                     <p className="mb-0 leading-[1.5]">그래서 공부는 뒤로 미루죠.</p>
-                    <p className="leading-[1.5]">하지만 수능 점수가 받쳐주지 않는다면, 아무리 실기를 잘해도 합격할 수 없습니다.</p>
+                    <p className="leading-[1.5]">하지만 수능 점수가 받쳐주지 않는다면, 합격은 어렵습니다.</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -366,13 +383,13 @@ function ManagementMethodSection() {
                       </div>
                       <ul className="block flex-1 font-medium leading-[1.5] min-w-0 relative text-[#353644] text-sm md:text-base lg:text-[28px] w-full md:w-auto">
                         <li className="mb-0 ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
-                          <span className="break-words">입반초, 전과목 진단 테스트로 현재 성적·학습 습관 데이터화</span>
+                          <span className="break-words">등원 직후, 진단 테스트로 현재 성적과 학습 습관을 데이터화</span>
                         </li>
                         <li className="mb-0 ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
-                          <span className="break-words">취약 단원, 오답 유형, 공부 태도까지 분석 구조</span>
+                          <span className="break-words">취약 단원, 오답 유형, 공부 태도까지 분석</span>
                         </li>
                         <li className="ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
-                          <span className="break-words">분석 결과 기반 개인 맞춤 학습 플랜 수립 관리 및 세부 과제 부여</span>
+                          <span className="break-words">분석 결과를 기반으로 개인 맞춤 학습 플랜 수립 관리 및 세부 과제 부여</span>
                         </li>
                       </ul>
                     </div>
@@ -387,11 +404,11 @@ function ManagementMethodSection() {
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
                       <div className="content-stretch flex flex-col gap-[16px] items-start leading-[1.5] relative shrink-0 w-full md:w-[300px] min-w-0">
                         <p className="font-medium relative shrink-0 text-[#077a5e] text-sm md:text-base lg:text-[24px] w-full break-words leading-[1.5]">POINT 2</p>
-                        <p className="font-bold relative shrink-0 text-[#353644] text-lg md:text-xl lg:text-[36px] w-full break-words leading-[1.5]">1:1 피드백</p>
+                        <p className="font-bold relative shrink-0 text-[#353644] text-lg md:text-xl lg:text-[36px] w-full break-words leading-[1.5]">1:1 SOLUTION</p>
                       </div>
                       <ul className="block flex-1 font-medium leading-[1.5] min-w-0 relative text-[#353644] text-sm md:text-base lg:text-[28px] w-full md:w-auto">
                         <li className="mb-0 ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
-                          <span className="break-words">국•영 영역별, 수준별 전담 선생님이 개인별로 취약 부분에 대한 세부 과제 매주 부여</span>
+                          <span className="break-words">국•영 영역별, 수준별 책임 담임제 실시, 개인별로 취약 부분에 대한 세부 과제 매주 부여</span>
                         </li>
                         <li className="ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
                           <span className="break-words">학생은 매주 확인하고 취약 부분에 대한 습관 탈피</span>
@@ -443,7 +460,7 @@ function ManagementMethodSection() {
                     <div className="content-stretch flex flex-col md:flex-row gap-6 md:gap-[48px] items-start md:items-center not-italic px-6 md:px-12 lg:px-[48px] py-6 md:py-12 lg:py-[60px] relative w-full">
                       <div className="content-stretch flex flex-col gap-[16px] items-start leading-[1.5] relative shrink-0 w-full md:w-[300px] min-w-0">
                         <p className="font-medium relative shrink-0 text-[#f05705] text-sm md:text-base lg:text-[24px] w-full break-words leading-[1.5]">POINT 1</p>
-                        <p className="font-bold relative shrink-0 text-[#353644] text-lg md:text-xl lg:text-[36px] w-full break-words leading-[1.5]">생활 리듬 엄격 관리</p>
+                        <p className="font-bold relative shrink-0 text-[#353644] text-lg md:text-xl lg:text-[36px] w-full break-words leading-[1.5]">엄격한 생활 관리</p>
                       </div>
                       <ul className="block flex-1 font-medium leading-[1.5] min-w-0 relative text-[#353644] text-sm md:text-base lg:text-[28px] w-full md:w-auto">
                         <li className="ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
@@ -466,7 +483,7 @@ function ManagementMethodSection() {
                       </div>
                       <ul className="block flex-1 font-medium leading-[1.5] min-w-0 relative text-[#353644] text-sm md:text-base lg:text-[28px] w-full md:w-auto">
                         <li className="mb-0 ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
-                          <span className="break-words">김지웅 미대 컨설턴트의 서류 및 면접 핵심 point 수업 제공</span>
+                          <span className="break-words">김지웅 미대 컨설턴트의 서류 및 면접의 핵심 컨설팅 제공</span>
                         </li>
                         <li className="mb-0 ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
                           <span className="break-words">수능, 내신, 실기 수준을 종합한 미대 진학 컨설팅 제공</span>
@@ -525,10 +542,10 @@ function ManagementMethodSection() {
                           <span className="break-words">최적화된 분석, 재밌는 수업, 효율적인 피드백</span>
                         </li>
                         <li className="mb-0 ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
-                          <span className="break-words">국어 불수능에 이어 의대 증원에도 국어 성적을 만든 최고의 국어</span>
+                          <span className="break-words">의대 증원에 이어 불수능에도 경이러운 성적 향상</span>
                         </li>
                         <li className="ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
-                          <span className="break-words">시대인재•청솔학원•메가스터디 출신 강사진</span>
+                          <span className="break-words">매년 놀라운 성적 향상 핵심은 책임 담임제로 운영되는 ST-SOLUTION</span>
                         </li>
                       </ul>
                     </div>
@@ -594,7 +611,10 @@ function ManagementMethodSection() {
                       </div>
                       <ul className="block flex-1 font-medium leading-[1.5] min-w-0 relative text-[#353644] text-sm md:text-base lg:text-[28px] w-full md:w-auto">
                         <li className="mb-0 ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
-                          <span className="break-words">시간이 부족한 예체능 입시에게 맞는 최적의 탐구 2과목 성적 향상 프로그램 완비</span>
+                          <span className="break-words">강남 대치 1타 강사진의 수업</span>
+                        </li>
+                        <li className="mb-0 ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
+                          <span className="break-words">시간이 부족한 예체능 입시생에게 맞는 최적의 탐구 2과목 성적 향상 프로그램 완비</span>
                         </li>
                         <li className="ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
                           <span className="break-words">극강의 재미있는 수업, 꼼꼼한 과제, 친절한 질문 답변은 필수</span>
@@ -633,11 +653,11 @@ function DailyManagementSection() {
               {[
                 {
                   title: "기상 관리",
-                  description: "오전 6시 30분 이전 기상 확인 문자 등록을 시작으로 하루의 시작을 규칙적으로 만들고 늦잠·지각을 원천 차단"
+                  description: "오전 7시 이전 기상 확인 문자 등록을 시작으로 하루의 시작을 규칙적으로 만들고 늦잠·지각을 원천 차단"
                 },
                 {
                   title: "등원 관리",
-                  description: "오전 7시 50분까지 등원 필수 출결을 엄격히 관리하여 생활 리듬 고정학원 내에서 학생 간 불필요한 잡담·사고 금지"
+                  description: "오전 7시 50분까지 등원 필수 출결을 엄격히 관리하여 생활 리듬을 고정, 학원 내 모든 장소 Silent Zone 운영"
                 },
                 {
                   title: "엄격한 생활 규율",
@@ -707,12 +727,12 @@ function DailyManagementSection() {
               <div className="font-bold leading-[1.5] not-italic relative shrink-0 text-[#353644] text-xl md:text-2xl lg:text-[48px] text-center break-words">
                 <p className="mb-0 leading-[1.5]">
                   <span>
-                    단순한 수업과 훈련을 넘어, 생활 전체를 설계하고 관리합니다.
+                    예체능 입시 학원 선택의 기준은
                     <br aria-hidden="true" />{" "}
                   </span>
-                  <span className="text-[#077a5e]">재수의 불안함을 '확실한 관리'로 바꾸는 것,</span>
+                  <span className="text-[#077a5e]">매년 "성적을 올리는 학원" 입니다.</span>
                 </p>
-                <p className="leading-[1.5]">그것이 우리의 합격 전략입니다.</p>
+                <p className="leading-[1.5]">재수는 시작부터 달라야 합니다.</p>
               </div>
             </ScrollReveal>
         </div>
@@ -766,11 +786,25 @@ function FloatingCTA() {
   )
 }
 
+// 플로팅 전화 버튼
+function FloatingPhone() {
+  return (
+    <a
+      href="tel:050714958915"
+      className="fixed bottom-6 md:bottom-8 right-6 md:right-12 z-50 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#0D332F] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#01d3be]/50 animate-fade-in"
+      aria-label="전화 걸기 0507-1495-8915"
+    >
+      <FaPhone className="w-6 h-6 md:w-7 md:h-7" />
+    </a>
+  )
+}
+
 export default function RepeatPage() {
   return (
     <main className="min-h-screen bg-white">
       <FloatingTabs />
       <FloatingCTA />
+      <FloatingPhone />
       
       <HeroSection />
       <WhySection />
