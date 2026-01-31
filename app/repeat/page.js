@@ -1,9 +1,58 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import FloatingTabs from '../../components/FloatingTabs'
 import { sendGAEvent } from '../../lib/ga'
 import ScrollReveal from '../../components/ScrollReveal'
 import { FaPhone } from 'react-icons/fa6'
+import { IoMdClose } from 'react-icons/io'
+
+const EVENT_BAR_STORAGE_KEY = 'repeat_event_bar_dismissed'
+
+// 이벤트 상단 고정 앱 바
+function EventAppBar() {
+  const [visible, setVisible] = useState(true)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const dismissed = sessionStorage.getItem(EVENT_BAR_STORAGE_KEY)
+    if (dismissed === '1') setVisible(false)
+  }, [])
+
+  const handleClose = () => {
+    sessionStorage.setItem(EVENT_BAR_STORAGE_KEY, '1')
+    setVisible(false)
+  }
+
+  if (!visible) return null
+
+  return (
+    <div className="fixed top-0 left-0 right-0 z-[100] bg-[#1a1a1d] text-white flex items-center px-3 py-2 md:px-6 md:py-3">
+      {/* 왼쪽 여백 - 텍스트 중앙 정렬을 위해 */}
+      <div className="flex-1 min-w-0" aria-hidden />
+      {/* 중앙 텍스트 */}
+      <p className="flex-shrink-0 text-xs md:text-sm leading-[1.4] text-center px-2 max-w-[85vw] sm:max-w-none">
+        <span className="hidden md:inline">
+          ST-예인 10기 모집 이벤트 | 상담 신청 후 요청사항에 &quot;10기 모집&quot;를 작성하시면 첫 달 교육비 10% 선착순 할인!
+        </span>
+        <span className="md:hidden">
+          상담 요청사항에 &quot;10기 모집 &quot; 작성하면 첫 달 교육비 10% 선착순 할인!
+        </span>
+      </p>
+      {/* 우측 닫기 버튼 */}
+      <div className="flex-1 min-w-0 flex justify-end">
+        <button
+          type="button"
+          onClick={handleClose}
+          className="p-1 rounded hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
+          aria-label="닫기"
+        >
+          <IoMdClose className="w-5 h-5 md:w-6 md:h-6" />
+        </button>
+      </div>
+    </div>
+  )
+}
 
 // 히어로 섹션 - YouTube 영상 배경
 function HeroSection() {
@@ -805,6 +854,7 @@ function FloatingPhone() {
 export default function RepeatPage() {
   return (
     <main className="min-h-screen bg-white">
+      <EventAppBar />
       <FloatingTabs />
       <FloatingCTA />
       <FloatingPhone />
