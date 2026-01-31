@@ -153,7 +153,7 @@ function SuccessCasesSection() {
       name: "이OO",
       major: "체육",
       quote: "백분위, \"85 UP\"\n재수부터 ST예인에서 했었더라면...",
-      scores: ["국어 : 4 →3", "영어 : 3 → 3", "탐구 : 3 → 2", "탐구 : 4→ 2"],
+      scores: ["국어 : 4 →3", "수학 : 5 → 3", "영어 : 3 → 3", "탐구 : 3 → 2", "탐구 : 4→ 2"],
       improvement: "6",
       avatar: "/images/Frame 46723-5.png"
     }
