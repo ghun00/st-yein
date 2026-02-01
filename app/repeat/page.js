@@ -33,7 +33,7 @@ function EventAppBar() {
       {/* 중앙 텍스트 */}
       <p className="flex-shrink-0 text-xs md:text-sm leading-[1.4] text-center px-2 max-w-[85vw] sm:max-w-none">
         <span className="hidden md:inline">
-          ST-예인 10기 모집 이벤트 | 상담 신청 후 요청사항에 &quot;10기 모집&quot;를 작성하시면 첫 달 교육비 10% 선착순 할인!
+          ST-예인 10기 모집 이벤트 | 상담 신청 후 요청사항에 &quot;10기 모집&quot;을 작성하시면 첫 달 교육비 10% 선착순 할인!
         </span>
         <span className="md:hidden">
           상담 요청사항에 &quot;10기 모집 &quot; 작성하면 첫 달 교육비 10% 선착순 할인!
