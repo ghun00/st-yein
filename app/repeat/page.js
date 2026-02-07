@@ -591,7 +591,7 @@ function ManagementMethodSection() {
                           <span className="break-words">최적화된 분석, 재밌는 수업, 효율적인 피드백</span>
                         </li>
                         <li className="mb-0 ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
-                          <span className="break-words">의대 증원에 이어 불수능에도 경이러운 성적 향상</span>
+                          <span className="break-words">의대 증원에 이어 불수능에도 경이로운 성적 향상</span>
                         </li>
                         <li className="ms-0 md:ms-[42px] leading-[1.5] list-disc list-inside">
                           <span className="break-words">매년 놀라운 성적 향상 핵심은 책임 담임제로 운영되는 ST-SOLUTION</span>
