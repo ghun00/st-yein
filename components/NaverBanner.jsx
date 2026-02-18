@@ -42,7 +42,7 @@ export default function NaverBanner() {
         <div className="flex-shrink-0">
           <Image
             src="/images/icons8-네이버-96.png"
-            alt="네이버"
+            alt="ST-예인 네이버 블로그 바로가기"
             width={96}
             height={96}
             className="w-16 h-16 sm:w-20 sm:h-20"

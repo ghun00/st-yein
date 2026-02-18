@@ -39,10 +39,10 @@ export default function Hero() {
       <div className="w-full max-w-content mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         {/* 텍스트 영역 - 중앙 정렬 */}
         <div className="text-ink space-y-6 lg:space-y-8 text-center max-w-3xl mx-auto animate-fade-in-up">
-          {/* 제목 (하나의 h1로 통합) */}
+          {/* 제목 (h1 1개, 핵심 키워드 포함) */}
           <h1 className="text-[36px] md:text-[56px] font-extrabold leading-[1.4] tracking-[-0.02em] text-ink drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)]">
-            곧 다가오는 겨울방학,<br />
-            지금 바로 써먹을 수 있는 겨울방학 전략 자료집
+            예체능 재수생을 위한<br />
+            겨울방학 전략 자료집
           </h1>
 
           {/* 부제목 (2줄) */}
@@ -78,7 +78,7 @@ export default function Hero() {
         <div className="relative w-full h-full filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]">
           <Image
             src="/images/book_cover.png"
-            alt="겨울방학 전략 자료집 책 이미지"
+            alt="예체능 재수·체대·미대 입시생을 위한 겨울방학 전략 자료집 책 표지"
             fill
             className="object-contain"
             priority

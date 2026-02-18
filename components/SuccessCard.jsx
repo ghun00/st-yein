@@ -17,7 +17,7 @@ export default function SuccessCard({ scoreDelta, name, university, gender }) {
 
       <Image
         src={silhouetteSrc}
-        alt={`${name} 실루엣`}
+        alt={`예체능 재수 합격생 ${name} - ${university}`}
         width={240}
         height={240}
         className="absolute bottom-0 right-0 w-[70%] sm:w-[75%] opacity-90 pointer-events-none select-none object-contain"

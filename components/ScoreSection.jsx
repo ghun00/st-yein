@@ -35,17 +35,17 @@ const IMPROVEMENT_CASES = [
   {
     defaultSrc: '/images/examples/example1_default.png',
     hoverSrc: '/images/examples/example1_open.png',
-    label: '성적 향상 사례 1',
+    label: '예체능 입시 성적 향상 사례 1',
   },
   {
     defaultSrc: '/images/examples/example2_default.png',
     hoverSrc: '/images/examples/example2_open.png',
-    label: '성적 향상 사례 2',
+    label: '예체능 입시 성적 향상 사례 2',
   },
   {
     defaultSrc: '/images/examples/example3_default.png',
     hoverSrc: '/images/examples/example3_open.png',
-    label: '성적 향상 사례 3',
+    label: '예체능 입시 성적 향상 사례 3',
   },
 ]
 
@@ -123,7 +123,7 @@ export default function ScoreSection() {
             <div className="relative w-full h-full overflow-hidden rounded-[16px] flex items-center justify-center">
               <Image
                 src={currentTab.image}
-                alt={currentTab.label}
+                alt={`예체능 재수·체대·미대 입시생 ${currentTab.label} - ${currentTab.title}`}
                 // width/height 대신 fill + object-contain 사용
                 fill
                 className="object-contain"

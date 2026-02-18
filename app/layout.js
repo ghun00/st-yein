@@ -1,32 +1,58 @@
 import Script from 'next/script'
 import './globals.css'
-
-const OG_IMAGE_URL = 'https://mblogthumb-phinf.pstatic.net/MjAyMDEyMjhfMTk3/MDAxNjA5MTQ1MjQ2Mzgy.sytEceYQyHf-r795IbeS4p9gSqKYbGw3wNW1JFg1j80g.4G1n7ZIFpuFlExCamAad107FJpkwIahko_j9_iZAAbwg.JPEG.jungwk2000/KakaoTalk_20201217_160250367.jpg?type=w800'
+import { SITE_URL, SITE_NAME, DEFAULT_TITLE, DEFAULT_DESCRIPTION, getOgImages } from '../lib/seo'
+import SeoJsonLd from '../components/SeoJsonLd'
 
 export const metadata = {
-  title: 'ST-예인 | 예체능 입시생을 위한 최상의 학습 관리',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: DEFAULT_TITLE,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: DEFAULT_DESCRIPTION,
+  keywords: [
+    '예체능 재수',
+    '예체능 재수학원',
+    '예체능 재수 종합반',
+    '체대입시 재수',
+    '미대입시 재수',
+    '대치동 재수',
+    '예체능 입시',
+    '체대 입시',
+    '미대 입시',
+    'ST-예인',
+  ],
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: SITE_URL, // 페이지별 metadata.alternates.canonical로 오버라이드
+  },
   verification: {
     google: 'iAgdtusVBFPtzgs0tlR3aS00icHzmK1dbdxHOuG_V2E',
   },
-  description: '예체능 입시생을 위한 최상의 학습 관리를 ST-예인과 함께하세요!',
   openGraph: {
-    title: 'ST-예인 | 예체능 입시생을 위한 최상의 학습 관리',
-    description: '예체능 입시생을 위한 최상의 학습 관리를 ST-예인과 함께하세요!',
-    images: [
-      {
-        url: OG_IMAGE_URL,
-        width: 800,
-        height: 400,
-        alt: 'ST-예인',
-      },
-    ],
     type: 'website',
+    locale: 'ko_KR',
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: getOgImages(),
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ST-예인 | 예체능 입시생을 위한 최상의 학습 관리',
-    description: '예체능 입시생을 위한 최상의 학습 관리를 ST-예인과 함께하세요!',
-    images: [OG_IMAGE_URL],
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: getOgImages().map((img) => img.url),
   },
 }
 
@@ -48,9 +74,10 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
-      <body>{children}</body>
+      <body>
+        <SeoJsonLd />
+        {children}
+      </body>
     </html>
   )
 }
-
-
