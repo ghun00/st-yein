@@ -5,22 +5,23 @@ import { SITE_URL } from '../lib/seo'
  * Next.js App Router: app/robots.js → /robots.txt
  */
 export default function robots() {
+  const disallowPaths = ['/api/', '/_next/']
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
-        disallow: [
-          '/api/',
-          '/_next/',
-          '/private/',
-          // 폼 제출 후 리다이렉트 등 검색 노출 불필요 페이지 (필요 시 추가)
-        ].filter(Boolean),
+        disallow: disallowPaths,
+      },
+      {
+        userAgent: 'Yeti',
+        allow: '/',
+        disallow: disallowPaths,
       },
       {
         userAgent: 'Googlebot',
         allow: '/',
-        disallow: ['/api/', '/_next/', '/private/'].filter(Boolean),
+        disallow: disallowPaths,
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
