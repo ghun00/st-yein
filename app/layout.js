@@ -5,6 +5,9 @@ const OG_IMAGE_URL = 'https://mblogthumb-phinf.pstatic.net/MjAyMDEyMjhfMTk3/MDAx
 
 export const metadata = {
   title: 'ST-예인 | 예체능 입시생을 위한 최상의 학습 관리',
+  verification: {
+    google: 'iAgdtusVBFPtzgs0tlR3aS00icHzmK1dbdxHOuG_V2E',
+  },
   description: '예체능 입시생을 위한 최상의 학습 관리를 ST-예인과 함께하세요!',
   openGraph: {
     title: 'ST-예인 | 예체능 입시생을 위한 최상의 학습 관리',
@@ -31,6 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ko">
       <head>
+        <meta name="naver-site-verification" content="f85b4d44bd5cbcd9e59a4af75ed635dec0863d0a" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-399SGJW9CX"
           strategy="afterInteractive"
